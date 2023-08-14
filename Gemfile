@@ -64,3 +64,8 @@ group :development do
   # gem "spring"
 end
 
+# A Ruby language server [https://github.com/castwide/solargraph]
+gem "solargraph"
+
+# A Ruby static code analyzer and formatter, based on the community Ruby style guide [https://github.com/rubocop/rubocop]
+gem "rubocop"
