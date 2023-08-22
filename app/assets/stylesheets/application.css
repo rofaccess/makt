@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+ /* The prev require_tree and require_self automatically include all css files insde app/assets/stylesheets */
+
+/* Import vendor template */
+@import "mazer/app";
+@import "mazer/app-dark";
