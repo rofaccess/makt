@@ -30,5 +30,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore vscode folder
-.vscode/
+# Ignore vscode folder and files except launch.json file
+.vscode/*
+!.vscode/launch.json
