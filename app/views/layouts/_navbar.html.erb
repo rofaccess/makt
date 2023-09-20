@@ -35,7 +35,11 @@
           </li>
           <li><a class="dropdown-item" href="#" data-turbo="false"><i class="icon-mid bi bi-person me-2"></i> Mi Perfil</a></li>
           <hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#" data-turbo="false"><i class="icon-mid bi bi-box-arrow-left me-2"></i> Cerrar Sesión</a></li>
+          <li>
+            <%= link_to destroy_user_session_path, class: "dropdown-item",  data: { turbo_method: :delete } do %>
+              <i class="icon-mid bi bi-box-arrow-left me-2"></i>
+              Cerrar Sesión
+            <% end %>
         </ul>
       </div>
     </div>
