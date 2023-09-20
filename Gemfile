@@ -65,6 +65,9 @@ group :development do
 
   # A Ruby language server [https://github.com/castwide/solargraph]
   gem "solargraph"
+
+  # A normaliser/beautifier for HTML that also understands embedded Ruby. Ideal for tidying up Rails templates [https://github.com/threedaymonk/htmlbeautifier]
+  gem "htmlbeautifier"
 end
 
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide [https://github.com/rubocop/rubocop]
