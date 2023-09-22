@@ -29,16 +29,16 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   devise:
     sessions:
       new:
-        title: Log in.
-        subtitle: Log in with your data that you entered during registration
-        email: Email
-        password: Password
-        remember_me: Remember me
-        login: Log in
-        dont_have_an_account: Don't have an account?
-        signup: Sign up
-        forgot_password: Forgot password?
+        title: Iniciar Sesión
+        subtitle: Inicia Sesión con los datos que ingresaste durante el registro.
+        email: Correo
+        password: Contraseña
+        remember_me: Recuérdame
+        login: Ingresar
+        dont_have_an_account: ¿No tienes una cuenta?
+        signup: Regístrate
+        forgot_password: ¿Olvidaste tu contraseña?
