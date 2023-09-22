@@ -3,8 +3,12 @@
     <div class="col-lg-5 col-12">
       <div id="auth-left">
         <div class="auth-logo">
-          <a href="#"><img src="../user.jpeg" alt="MaKT"></a>
+          <div class="d-flex justify-content-between align-items-center">
+            <%= logo_tag %>
+            <%= render "layouts/theme_switcher" %>
+          </div>
         </div>
+
         <h1 class="auth-title"><%= t(".title") %></h1>
         <p class="auth-subtitle mb-5"><%= t(".subtitle") %>.</p>
 
