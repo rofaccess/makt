@@ -39,9 +39,6 @@ en:
         password: Password
         remember_me: Remember me
         login: Log in
-        dont_have_an_account: Don't have an account?
-        signup: Sign up
-        forgot_password: Forgot password?
     registrations:
       new:
         title: Sign Up
@@ -52,15 +49,17 @@ en:
         confirm_password: Confirm Password
         minimum_password_length: "%{length} characters minimum"
         signup: Sign Up
-        already_have_an_account: Already have an account?
-        login: Log in
     passwords:
       new:
         title: Forgot password
         subtitle: Input your email and we will send you reset password link
         email: Email
         send: Send
-        remember_your_account: Remember your account?
-        login: Log in
+    shared:
+      links:
         dont_have_an_account: Don't have an account?
         signup: Sign Up
+        forgot_password: Forgot password?
+        already_have_an_account: Already have an account?
+        remember_your_account: Remember your account?
+        login: Log in

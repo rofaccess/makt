@@ -29,19 +29,10 @@
               <%= f.label :remember_me, t(".remember_me"), class: "form-check-label text-gray-600", for: "flexCheckDefault" %>
             </div>
           <% end %>
-          <%= f.submit t(".login"), class: "btn btn-primary btn-block btn-lg shadow-lg mt-5" %>
+          <%= f.submit t(".login"), class: "btn btn-primary btn-block btn-lg shadow-lg mt-5", data: {turbo: false} %>
         <% end %>
         <div class="text-center mt-5 text-lg fs-4">
-          <%- if devise_mapping.registerable? %>
-            <p class="text-gray-600"> <%= t(".dont_have_an_account") %>
-              <%= link_to t(".signup"), new_registration_path(resource_name), class: "font-bold" %>.
-            </p>
-          <% end %>
-          <%- if devise_mapping.recoverable? %>
-            <p>
-              <%= link_to t(".forgot_password"), new_password_path(resource_name), class: "font-bold" %>.
-            </p>
-          <% end %>
+          <%= render "devise/shared/links" %>
         </div>
       </div>
     </div>

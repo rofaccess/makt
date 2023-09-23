@@ -19,4 +19,13 @@ module ApplicationHelper
   def logo_tag
     "<a href='#'><img src='#{image_path(logo_name)}' alt='MaKT'></a>".html_safe
   end
+
+  def new_devise_session_text
+    case controller_name
+    when "registrations"
+      t(".already_have_an_account")
+    when "passwords"
+      t(".remember_your_account")
+    end
+  end
 end
