@@ -50,6 +50,7 @@ es:
         username: Nombre de Usuario
         password: Contraseña
         confirm_password: Confirmar Contraseña
+        minimum_password_length: "%{length} caracters mínimo"
         signup: Registrarse
         already_have_an_account: ¿Ya tienes una cuenta?
         login: Ingresar

@@ -50,6 +50,7 @@ en:
         username: Username
         password: Password
         confirm_password: Confirm Password
+        minimum_password_length: "%{length} characters minimum"
         signup: Sign Up
         already_have_an_account: Already have an account?
         login: Log in

@@ -27,7 +27,7 @@
           </div>
           -->
           <% if @minimum_password_length %>
-            <em style="text-align: right">(<%= @minimum_password_length %> characters minimum)</em>
+            <em style="text-align: right">(<%= t(".minimum_password_length", length: @minimum_password_length) %> )</em>
           <% end %>
 
           <div class="form-group position-relative has-icon-left mb-4">
