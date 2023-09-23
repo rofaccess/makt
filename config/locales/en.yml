@@ -33,7 +33,7 @@ en:
   devise:
     sessions:
       new:
-        title: Log in.
+        title: Log in
         subtitle: Log in with your data that you entered during registration
         email: Email
         password: Password
@@ -42,3 +42,14 @@ en:
         dont_have_an_account: Don't have an account?
         signup: Sign up
         forgot_password: Forgot password?
+    registrations:
+      new:
+        title: Sign Up
+        subtitle: Input your data to register to our website
+        email: Email
+        username: Username
+        password: Password
+        confirm_password: Confirm Password
+        signup: Sign Up
+        already_have_an_account: Already have an account?
+        login: Log in
