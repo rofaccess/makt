@@ -54,3 +54,13 @@ es:
         signup: Registrarse
         already_have_an_account: ¿Ya tienes una cuenta?
         login: Ingresar
+    passwords:
+      new:
+        title: ¿Olvidaste tu contraseña?
+        subtitle: Ingresa tu correo y te enviaremos un link para resetear tu contraseña
+        email: Correo
+        send: Enviar
+        remember_your_account: ¿Recuerdas tu cuenta?
+        login: Ingresar
+        dont_have_an_account: ¿No tienes una cuenta?
+        signup: Regístrate

@@ -54,3 +54,13 @@ en:
         signup: Sign Up
         already_have_an_account: Already have an account?
         login: Log in
+    passwords:
+      new:
+        title: Forgot password
+        subtitle: Input your email and we will send you reset password link
+        email: Email
+        send: Send
+        remember_your_account: Remember your account?
+        login: Log in
+        dont_have_an_account: Don't have an account?
+        signup: Sign Up
