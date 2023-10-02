@@ -1,44 +1,30 @@
-<div id="auth">
-  <div class="row h-100">
-    <div class="col-lg-5 col-12">
-      <div id="auth-left">
-        <%= render "layouts/components/auth_header" %>
+<h1 class="auth-title"><%= t(".title") %>.</h1>
+<p class="auth-subtitle mb-5"><%= t(".subtitle") %>.</p>
 
-        <h1 class="auth-title"><%= t(".title") %>.</h1>
-        <p class="auth-subtitle mb-5"><%= t(".subtitle") %>.</p>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
-
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-group position-relative has-icon-left mb-4">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-xl", placeholder: t(".email") %>
-            <div class="form-control-icon">
-              <i class="bi bi-envelope"></i>
-            </div>
-          </div>
-          <div class="form-group position-relative has-icon-left mb-4">
-            <%= f.password_field :password, autocomplete: "current-password", class: "form-control form-control-xl", placeholder: t(".password") %>
-            <div class="form-control-icon">
-              <i class="bi bi-shield-lock"></i>
-            </div>
-          </div>
-          <% if devise_mapping.rememberable? %>
-            <div class="form-check form-check-lg d-flex align-items-end">
-              <%= f.check_box :remember_me, class: "form-check-input me-2", id: "flexCheckDefault" %>
-              <%= f.label :remember_me, t(".remember_me"), class: "form-check-label text-gray-600", for: "flexCheckDefault" %>
-            </div>
-          <% end %>
-          <%= f.submit t(".login"), class: "btn btn-primary btn-block btn-lg shadow-lg mt-5", data: {turbo: false} %>
-        <% end %>
-        <div class="text-center mt-5 text-lg fs-4">
-          <%= render "devise/shared/links" %>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-7 d-none d-lg-block">
-      <div id="auth-right">
-      </div>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-group position-relative has-icon-left mb-4">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-xl", placeholder: t(".email") %>
+    <div class="form-control-icon">
+      <i class="bi bi-envelope"></i>
     </div>
   </div>
-</div>
+
+  <div class="form-group position-relative has-icon-left mb-4">
+    <%= f.password_field :password, autocomplete: "current-password", class: "form-control form-control-xl", placeholder: t(".password") %>
+    <div class="form-control-icon">
+      <i class="bi bi-shield-lock"></i>
+    </div>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="form-check form-check-lg d-flex align-items-end">
+      <%= f.check_box :remember_me, class: "form-check-input me-2", id: "flexCheckDefault" %>
+      <%= f.label :remember_me, t(".remember_me"), class: "form-check-label text-gray-600", for: "flexCheckDefault" %>
+    </div>
+  <% end %>
+
+  <%= f.submit t(".login"), class: "btn btn-primary btn-block btn-lg shadow-lg mt-5", data: {turbo: false} %>
+<% end %>

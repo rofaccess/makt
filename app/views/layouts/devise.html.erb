@@ -10,6 +10,25 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= yield %>
+    <div id="auth">
+      <div class="row h-100">
+        <div class="col-lg-5 col-12">
+          <div id="auth-left">
+            <%= render "layouts/components/auth_header" %>
+
+            <%= yield %>
+
+            <div class="text-center mt-5 text-lg fs-4">
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 d-none d-lg-block">
+          <div id="auth-right">
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

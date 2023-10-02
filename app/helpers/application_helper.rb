@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def logo_tag
-    "<a href='#'><img src='#{image_path(logo_name)}' alt='MaKT'></a>".html_safe
+    "<a href='#{root_path}'><img src='#{image_path(logo_name)}' alt='MaKT'></a>".html_safe
   end
 
   def new_devise_session_text
