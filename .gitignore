@@ -33,3 +33,6 @@
 # Ignore vscode folder and files except launch.json file
 .vscode/*
 !.vscode/launch.json
+
+# Ignore mysql workbench file backup
+*.mwb.bak
