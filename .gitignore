@@ -36,3 +36,6 @@
 
 # Ignore mysql workbench file backup
 *.mwb.bak
+
+# Ignore coverage folder
+/coverage

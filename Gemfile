@@ -73,6 +73,10 @@ group :development do
   gem "htmlbeautifier"
 end
 
+group :test do
+  gem "simplecov", require: false
+end
+
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide [https://github.com/rubocop/rubocop]
 gem "rubocop"
 
