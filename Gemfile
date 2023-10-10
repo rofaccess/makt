@@ -74,7 +74,11 @@ group :development do
 end
 
 group :test do
+  # Code coverage for Ruby with a powerful configuration library and automatic merging of coverage across test suites [https://github.com/simplecov-ruby/simplecov]
   gem "simplecov", require: false
+
+  # Simplecov Output of HTML using Tailwind UX design [https://github.com/chiefpansancolt/simplecov-tailwindcss]
+  gem "simplecov-tailwindcss", require: false
 end
 
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide [https://github.com/rubocop/rubocop]
