@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# Create user
+users = [
+  { email: "rofaccess@gmail.com", password: "rohayhu" }
+]
+
+User.create(users)
+
+
+# Create product_brands
+product_brands = []
+30.times do
+  product_brands << {
+    name: Faker::Commerce.brand
+  }
+end
+
+ProductBrand.upsert_all(product_brands, unique_by: :name)

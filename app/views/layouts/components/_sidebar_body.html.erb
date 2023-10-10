@@ -34,5 +34,12 @@
         <span>Usuarios</span>
       </a>
     </li>
+
+    <li class="sidebar-item">
+      <%= link_to product_brands_path, class: "sidebar-link", data: { turbo: false } do %>
+        <i class="bi bi-box2"></i>
+        <span><%= t("activerecord.models.product_brand.other") %></span>
+      <% end %>
+    </li>
   </ul>
 </div>

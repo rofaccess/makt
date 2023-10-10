@@ -54,6 +54,9 @@ group :development, :test do
 
   # RSpec for Rails 5+ [https://github.com/rspec/rspec-rails]
   gem "rspec-rails", "~> 6.0.0"
+
+  # A library for generating fake data such as names, addresses, and phone numbers [https://github.com/faker-ruby/faker]
+  gem "faker"
 end
 
 group :development do

@@ -63,3 +63,17 @@ en:
         already_have_an_account: Already have an account?
         remember_your_account: Remember your account?
         login: Log in
+  activerecord:
+    models:
+      user:
+        one: User
+        other: Users
+      product_brand:
+        one: Brand
+        other: Brands
+    attributes:
+      user:
+        email: Email
+        password: Password
+      product_brand:
+        name: Name

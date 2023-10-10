@@ -63,3 +63,17 @@ es:
         already_have_an_account: ¿Ya tienes una cuenta?
         remember_your_account: ¿Recuerdas tu cuenta?
         login: Ingresar
+  activerecord:
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+      product_brand:
+        one: Marca
+        other: Marcas
+    attributes:
+      user:
+        email: Correo
+        password: Contraseña
+      product_brand:
+        name: Nombre
