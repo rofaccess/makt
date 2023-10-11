@@ -3,10 +3,11 @@
 class Sidebar::MenuComponent < ViewComponent::Base
   renders_many :submenus, Sidebar::SubmenuComponent
 
-  def initialize(icon: nil, text:, url: "#", active: false)
+  def initialize(icon: nil, text:, url: "#", turbo: false, active: false)
     @icon = icon
     @text = text
     @url = url
+    @turbo = turbo
     @active = active
   end
 

@@ -1,0 +1,38 @@
+<!-- SIDEBAR HEADER -->
+<div class="sidebar-header position-relative">
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- LOGO -->
+    <div class="logo">
+      <%= logo_tag %>
+    </div>
+
+    <%= render "layouts/components/theme_switcher" %>
+
+    <div class="sidebar-toggler x">
+      <a class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- SIDEBAR BODY -->
+<div class="sidebar-menu" data-controller="sidebar">
+  <ul class="menu">
+    <li class="sidebar-title"><%= t(".stock") %></li>
+
+    <%= render Sidebar::MenuComponent.new(icon: "boxes", text: t(".warehouses")) do |menu| %>
+      <% menu.with_submenus([
+        { text: "Depósito 1" },
+        { text: "Depósito 2" },
+      ]) %>
+    <% end %>
+
+    <%= render Sidebar::MenuComponent.new(icon: "gear", text: t(".settings"), active: active_path?(stock_settings_paths)) do |menu| %>
+      <% menu.with_submenus([
+        { text: t(".warehouses") },
+        { text: t(".products") },
+        { text: t("activerecord.models.product_brand.other"), url: product_brands_path, turbo: true }
+      ]) %>
+    <% end %>
+
+  </ul>
+</div>

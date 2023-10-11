@@ -65,7 +65,7 @@ en:
         login: Log in
   layouts:
     components:
-      sidebar_body:
+      sidebar:
         stock: Stock
         warehouses: Wareahouses
         movements: Movements

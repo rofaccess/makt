@@ -35,15 +35,13 @@ RSpec.describe Sidebar::SubmenuComponent, type: :component do
   end
 
   it "renders submenu with turbo true" do
-    skip "Until not add turbo attr"
-
-    render_inline(Sidebar::SubmenuComponent.new(text: "Submenu"))
+    render_inline(Sidebar::SubmenuComponent.new(text: "Submenu", turbo: true))
 
     expect(page).to have_link "Submenu", class: "submenu-link", href: "#", turbo: "true"
   end
 
   it "renders submenu with turbo false" do
-    render_inline(Sidebar::SubmenuComponent.new(text: "Submenu"))
+    render_inline(Sidebar::SubmenuComponent.new(text: "Submenu", turbo: false))
 
     expect(page).to have_link "Submenu", class: "submenu-link", href: "#", turbo: "false"
   end

@@ -65,7 +65,7 @@ es:
         login: Ingresar
   layouts:
     components:
-      sidebar_body:
+      sidebar:
         stock: Inventario
         warehouses: Depósitos
         movements: Movimientos

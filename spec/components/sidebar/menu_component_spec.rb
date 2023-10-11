@@ -35,15 +35,13 @@ RSpec.describe Sidebar::MenuComponent, type: :component do
   end
 
   it "renders menu with turbo true" do
-    skip "Until not add turbo attr"
-
-    render_inline(Sidebar::MenuComponent.new(text: "Menu"))
+    render_inline(Sidebar::MenuComponent.new(text: "Menu", turbo: true))
 
     expect(page).to have_link "Menu", class: "sidebar-link", href: "#", turbo: "true"
   end
 
   it "renders menu with turbo false" do
-    render_inline(Sidebar::MenuComponent.new(text: "Menu"))
+    render_inline(Sidebar::MenuComponent.new(text: "Menu", turbo: false))
 
     expect(page).to have_link "Menu", class: "sidebar-link", href: "#", turbo: "false"
   end

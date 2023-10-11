@@ -1,5 +1,5 @@
 <li class="<%= menu_class %>">
-  <%= link_to @url, class: "sidebar-link", data: { turbo: false } do %>
+  <%= link_to @url, class: "sidebar-link", data: { turbo: @turbo, turbo_stream: "" } do %>
     <% if @icon %>
       <i class="bi bi-<%= @icon %>"></i>
     <% end %>

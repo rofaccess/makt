@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="card-title"><%= t("activerecord.models.product_brand.other") %></h4>
+  </div>
+
+  <div class="card-body">
+    <div id="product_brands">
+      <% product_brands.each do |product_brand| %>
+        <%= render product_brand %>
+        <p>
+          <%= link_to "Show this product brand", product_brand %>
+        </p>
+      <% end %>
+    </div>
+
+    <%= link_to "New product brand", new_product_brand_path %>
+  </div>
+</div>
