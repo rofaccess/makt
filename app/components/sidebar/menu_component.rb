@@ -12,10 +12,16 @@ class Sidebar::MenuComponent < ViewComponent::Base
 
   private
 
-  def classes
+  def menu_class
     classes = +"sidebar-item"
     classes << " active" if @active
     classes << " has-sub" if submenus.any?
+    classes
+  end
+
+  def submenu_class
+    classes = +"submenu"
+    classes << " active" if @active
     classes
   end
 end

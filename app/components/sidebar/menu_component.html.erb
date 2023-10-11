@@ -1,4 +1,4 @@
-<li class="<%= classes %>">
+<li class="<%= menu_class %>">
   <%= link_to @url, class: "sidebar-link", data: { turbo: false } do %>
     <% if @icon %>
       <i class="bi bi-<%= @icon %>"></i>
@@ -8,7 +8,7 @@
   <% end %>
 
   <% if submenus.any? %>
-    <ul class="submenu">
+    <ul class="<%= submenu_class %>">
       <% submenus.each do |submenu| %>
         <%= submenu %>
       <% end %>
