@@ -36,6 +36,6 @@ module Macate
 
     # Locales
     config.i18n.available_locales = %i[en es]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = :es
   end
 end

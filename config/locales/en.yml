@@ -63,6 +63,14 @@ en:
         already_have_an_account: Already have an account?
         remember_your_account: Remember your account?
         login: Log in
+  layouts:
+    components:
+      sidebar_body:
+        stock: Stock
+        warehouses: Wareahouses
+        movements: Movements
+        settings: Settings
+        products: Products
   activerecord:
     models:
       user:

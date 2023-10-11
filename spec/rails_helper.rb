@@ -6,6 +6,9 @@ require_relative '../config/environment'
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
+require "view_component/test_helpers"
+require "view_component/system_test_helpers"
+require "capybara/rspec"
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
@@ -60,4 +63,25 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   # arbitrary gems may also be filtered via:
   # config.filter_gems_from_backtrace("gem name")
+
+  # To test view components [https://viewcomponent.org/guide/testing.html]
+  config.include ViewComponent::TestHelpers, type: :component
+  config.include ViewComponent::SystemTestHelpers, type: :component
+  config.include Capybara::RSpecMatchers, type: :component
+
+  # To test controllers with Devise [https://github.com/heartcombo/devise/]
+  config.include Devise::Test::ControllerHelpers, type: :request
+  config.include Devise::Test::ControllerHelpers, type: :view
+end
+
+# Extend Capybara have_link selector to consider data-turbo attr
+Capybara::Selector[:link].instance_eval do
+  expression_filter(:turbo) do |expression, value|
+    builder(expression).add_attribute_conditions("data-turbo": value)
+  end
+  describe_expression_filters do |**options|
+    if (turbo = options[:turbo])
+      " with turbo #{turbo.inspect}"
+    end
+  end
 end

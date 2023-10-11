@@ -8,7 +8,7 @@
 
 # Create user
 users = [
-  { email: "rofaccess@gmail.com", password: "rohayhu" }
+  { email: "user@email.com", password: "terere" }
 ]
 
 User.create(users)

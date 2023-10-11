@@ -1,0 +1,9 @@
+<li class="submenu-item <%= @active ? 'active' : '' %>">
+  <%= link_to @url, class: "submenu-link", data: { turbo: false } do %>
+    <% if @icon %>
+      <i class="bi bi-<%= @icon %>"></i>
+    <% end %>
+
+    <span><%= @text %></span>
+  <% end %>
+</li>

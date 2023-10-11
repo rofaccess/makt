@@ -82,6 +82,9 @@ group :test do
 
   # Simplecov Output of HTML using Tailwind UX design [https://github.com/chiefpansancolt/simplecov-tailwindcss]
   gem "simplecov-tailwindcss", require: false
+
+  # Acceptance test framework for web applications [https://github.com/teamcapybara/capybara]
+  gem "capybara"
 end
 
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide [https://github.com/rubocop/rubocop]
@@ -92,3 +95,6 @@ gem "mazer-rails", "~> 0.2.0"
 
 # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem "devise", "~> 4.9"
+
+# A framework for building reusable, testable & encapsulated view components in Ruby on Rails [https://github.com/ViewComponent/view_component]
+gem "view_component", "~> 3.6"

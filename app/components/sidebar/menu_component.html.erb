@@ -1,0 +1,17 @@
+<li class="<%= classes %>">
+  <%= link_to @url, class: "sidebar-link", data: { turbo: false } do %>
+    <% if @icon %>
+      <i class="bi bi-<%= @icon %>"></i>
+    <% end %>
+
+    <span><%= @text %></span>
+  <% end %>
+
+  <% if submenus.any? %>
+    <ul class="submenu">
+      <% submenus.each do |submenu| %>
+        <%= submenu %>
+      <% end %>
+    </ul>
+  <% end %>
+</li>

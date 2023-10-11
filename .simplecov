@@ -20,5 +20,5 @@ SimpleCov.profiles.define "makt" do
   # groups.clear
 
   ## Agregar otros grupos
-  # add_group 'Lib', 'lib'
+  add_group "Components", "components"
 end

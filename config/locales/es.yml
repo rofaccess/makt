@@ -63,6 +63,14 @@ es:
         already_have_an_account: ¿Ya tienes una cuenta?
         remember_your_account: ¿Recuerdas tu cuenta?
         login: Ingresar
+  layouts:
+    components:
+      sidebar_body:
+        stock: Inventario
+        warehouses: Depósitos
+        movements: Movimientos
+        settings: Configuración
+        products: Productos
   activerecord:
     models:
       user:

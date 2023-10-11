@@ -1,23 +1,23 @@
 module ApplicationHelper
-  def img_color
+  def logo_color
     # Alternatives: blue, green, lilac
     "lilac"
   end
 
   def logo_name
-    "logo_#{img_color}.png"
+    "logo_#{logo_color}.png"
   end
 
-  def favicon_name
-    "favicon_#{img_color}.ico"
+  def favicon_logo_name
+    "favicon_logo_#{logo_color}.ico"
   end
 
-  def favicon_tag
-    "<link rel='icon' type='image/x-icon' href='#{image_path(favicon_name)}'>".html_safe
+  def favicon_logo_tag
+    "<link rel='icon' type='image/x-icon' href='#{image_path(favicon_logo_name)}'>".html_safe
   end
 
   def logo_tag
-    "<a href='#{root_path}'><img src='#{image_path(logo_name)}' alt='MaKT'></a>".html_safe
+    "<a href='#{root_path}' data-turbo='false'><img src='#{image_path(logo_name)}' alt='MaKT'></a>".html_safe
   end
 
   def new_devise_session_text
@@ -27,5 +27,13 @@ module ApplicationHelper
     when "passwords"
       t(".remember_your_account")
     end
+  end
+
+  def active_path?(paths)
+    request.path.in?(paths)
+  end
+
+  def stock_settings_paths
+    [product_brands_path]
   end
 end
