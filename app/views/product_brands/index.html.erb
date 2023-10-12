@@ -1,1 +1,5 @@
-<%= render "index", product_brands: @product_brands %>
+<% content_for :head do %>
+  <%= render "list_header", product_brands: @product_brands %>
+<% end %>
+
+<%= render "list", product_brands: @product_brands %>

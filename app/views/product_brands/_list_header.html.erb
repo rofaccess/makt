@@ -1,0 +1,34 @@
+<div class="card-header">
+      <div class="row">
+        <div class="col-12 col-md-6 order-md-1 order-last">
+          <h4 class="card-title"><%= t("activerecord.models.product_brand.other") %></h4>
+          <%= link_to t("layouts.components.buttons.new_f", model: t("activerecord.models.product_brand.one")), new_product_brand_path, class: "btn btn-primary", data: { turbo: false } %>
+        </div>
+        <div class="col-12 col-md-6 order-md-2 order-first">
+          <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><%= t("layouts.components.sidebar.stock") %></li>
+              <li class="breadcrumb-item"><%= t("layouts.components.sidebar.settings") %></li>
+              <li class="breadcrumb-item active" aria-current="page"><%= t("activerecord.models.product_brand.other") %></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-header card-header-searcher">
+      <form class="row g-3 d-flex justify-content-center">
+        <div class="col-auto">
+          <a href="#" class="btn btn-sm icon btn-outline-primary" data-turbo="false"><i class="bi bi-list"></i></a>
+        </div>
+        <div class="col-auto">
+          <a href="#" class="btn btn-sm icon btn-outline-primary" data-turbo="false"><i class="bi bi-grid"></i></a>
+        </div>
+        <div class="col-auto">
+          <input type="text" class="form-control" id="basicInput" placeholder="Name">
+        </div>
+        <div class="col-auto">
+          <a href="#" class="btn btn-sm icon btn-primary" data-turbo="false"><i class="bi bi-search"></i></a>
+        </div>
+      </form>
+    </div>

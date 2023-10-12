@@ -20,14 +20,17 @@
 
       <!-- MAIN CONTAINER -->
       <div id="main" class="layout-navbar navbar-fixed">
-        <header>
-          <%= render "layouts/components/navbar" %>
-        </header>
+        <!--<div class="main-container"> -->
+          <header>
+            <%= render "layouts/components/navbar" %>
+          </header>
 
-        <!-- MAIN CONTENT -->
-        <div id="main-content">
-          <%= yield %>
-        </div>
+          <!-- MAIN CONTENT -->
+          <div id="main-content">
+            <%= yield %>
+          </div>
+        <!--</div> -->
+
         <footer>
           <div class="footer clearfix mb-0 text-muted">
             <div class="text-center">

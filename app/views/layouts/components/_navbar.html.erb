@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand navbar-light navbar-top">
-  <div class="container-fluid">
+  <div class="container-fluid navbar-header">
     <!-- SIDEBAR COLLAPSE -->
     <a href="#" data-turbo="false" class="burger-btn d-block">
       <i class="bi bi-justify fs-3"></i>
@@ -43,5 +43,9 @@
         </ul>
       </div>
     </div>
+  </div>
+
+  <div id="header-content" class="card navbar-body">
+    <%= yield :head %>
   </div>
 </nav>
