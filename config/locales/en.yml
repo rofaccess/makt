@@ -71,6 +71,9 @@ en:
         movements: Movements
         settings: Settings
         products: Products
+      buttons:
+        new_m: New %{model}
+        new_f: New %{model}
   activerecord:
     models:
       user:

@@ -20,6 +20,26 @@
 @import "mazer/app";
 @import "mazer/app-dark";
 
-#main #main-content {
-  padding: 0 2rem;
+// Form screen
+#main-content {
+  padding: 0 2rem !important;
+
+  .card {
+    border-radius: 0;
+
+    .card-header {
+      border-radius: 0;
+    }
+  }
+}
+
+// For Movile
+@media screen and (max-width:576px) {
+  #main-content {
+    padding: 0 !important;
+
+    .card {
+      border-radius: 0;
+    }
+  }
 }
