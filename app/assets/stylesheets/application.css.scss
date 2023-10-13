@@ -45,7 +45,7 @@
 }
 
 // navbar
-.navbar-expand {
+.navbar-expand, body.theme-dark .navbar-expand {
   flex-wrap: wrap;
 }
 
@@ -55,6 +55,11 @@
 
 .navbar-fixed .navbar-top {
   background-color: white;
+  margin: 0 2rem;
+  padding: 0;
+}
+
+body.theme-dark .navbar-fixed .navbar-top {
   margin: 0 2rem;
   padding: 0;
 }
@@ -70,6 +75,10 @@
 .navbar-body {
   width: 100%;
   margin-bottom: 0;
+
+  .card-header {
+    padding-top: 0;
+  }
 }
 
 .card-header-searcher {
