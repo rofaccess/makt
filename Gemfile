@@ -90,9 +90,6 @@ end
 # A Ruby static code analyzer and formatter, based on the community Ruby style guide [https://github.com/rubocop/rubocop]
 gem "rubocop"
 
-# Easily integrate Mazer admin theme in a Ruby on Rails app [https://github.com/noesya/mazer-rails]
-gem "mazer-rails", "~> 0.2.0"
-
 # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem "devise", "~> 4.9"
 
