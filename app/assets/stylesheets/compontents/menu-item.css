@@ -1,0 +1,10 @@
+.menu-item {
+
+  .menu-item__icon {
+    background-color: darkmagenta;
+  }
+
+  .menu-item__text {
+    background-color: darkkhaki;
+  }
+}

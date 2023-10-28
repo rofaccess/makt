@@ -11,7 +11,14 @@
   </head>
   <body>
     <div class="main-container">
-      <%= render MenuBar::MenuBarComponent.new %>
+      <%= render Menu::MenuBarComponent.new do |menu_bar| %>
+        <% menu_bar.with_shortcuts([
+          { icon: "1", text: "Home" },
+          { icon: "2", text: "Depósito 1" },
+        ]) %>
+
+        <% menu_bar.with_menu(icon: "3", text: "Menú") %>
+      <% end %>
 
       <div id="main-content">
         <%= yield %>

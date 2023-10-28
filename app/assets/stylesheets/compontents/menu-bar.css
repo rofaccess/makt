@@ -1,5 +1,4 @@
 .menu-bar {
-  /* Desktop */
   background-color: var(--menu-bar-bg-color);
   box-shadow: 0 0 5px 1px lightgray;
   border-bottom: 6px solid var(--menu-bar-bd-color);
@@ -14,14 +13,13 @@
       width: 100%;
   }
 
-  /* Display contents inline */
-  display: flex;
-
-  /* Show both contents in left and right */
-  justify-content: space-between;
+  display: flex; /* Display contents inline */
+  justify-content: space-between; /* Show both shortcuts in left and menu in right */
 
   .menu-bar__shortcuts {
     background-color: red;
+    display: flex; /* Display contents inline */
+    justify-content: start; /* Show all shortcuts in left */
   }
 
   .menu-bar__menu {
