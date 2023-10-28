@@ -23,6 +23,14 @@ module ApplicationHelper
   def icon_tag(icon_name, classes = nil)
     icon_path = "svg/#{icon_name}.svg"
     inline_svg_tag(icon_path, class: classes)
+  rescue InlineSvg::AssetFile::FileNotFound
+    default_icon_tag(classes)
+  end
+
+  def default_icon_tag(classes)
+    "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='#{classes}' viewBox='0 0 16 16'>
+      <circle cx='8' cy='8' r='8'/>
+    </svg>".html_safe
   end
 
   def new_devise_session_text
