@@ -17,3 +17,8 @@
  /* The prev require_tree and require_self automatically include all css files insde app/assets/stylesheets */
 
 /* Import vendor template */
+
+:root {
+  font-family: Lato, Roboto, sans-serif;
+  font-weight: normal;
+}

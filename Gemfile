@@ -95,3 +95,6 @@ gem "devise", "~> 4.9"
 
 # A framework for building reusable, testable & encapsulated view components in Ruby on Rails [https://github.com/ViewComponent/view_component]
 gem "view_component", "~> 3.6"
+
+# Embed SVG documents in your Rails views and style them with CSS [https://github.com/jamesmartin/inline_svg]
+gem "inline_svg"

@@ -15,14 +15,17 @@
 
   display: flex; /* Display contents inline */
   justify-content: space-between; /* Show both shortcuts in left and menu in right */
+  align-items: center;
+
+  .menu-bar__home {
+  }
 
   .menu-bar__shortcuts {
-    background-color: red;
-    display: flex; /* Display contents inline */
-    justify-content: start; /* Show all shortcuts in left */
+    display: flex; /* Display shortcuts inline */
+    justify-content: center; /* Show all shortcuts in left */
+    gap: 20px;
   }
 
   .menu-bar__menu {
-    background-color: green;
   }
 }

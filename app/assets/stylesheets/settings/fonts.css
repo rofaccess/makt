@@ -1,0 +1,11 @@
+/* From: https://gist.github.com/anotheruiguy/7379570 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Roboto"),
+    url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
+/* Add more styles and weight for Roboto */

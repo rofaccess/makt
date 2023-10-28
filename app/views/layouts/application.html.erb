@@ -12,12 +12,25 @@
   <body>
     <div class="main-container">
       <%= render Menu::MenuBarComponent.new do |menu_bar| %>
+        <% menu_bar.with_home(icon: "dashboard", text: "Inicio") %>
+
         <% menu_bar.with_shortcuts([
-          { icon: "1", text: "Home" },
-          { icon: "2", text: "Depósito 1" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "warehouse", text: "Depósitos" },
+          { icon: "boxes", text: "Productos" }
         ]) %>
 
-        <% menu_bar.with_menu(icon: "3", text: "Menú") %>
+        <% menu_bar.with_menu(icon: "justify", text: "Menú") %>
       <% end %>
 
       <div id="main-content">

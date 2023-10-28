@@ -1,10 +1,10 @@
 .menu-item {
+  text-align: center;
 
   .menu-item__icon {
-    background-color: darkmagenta;
+
   }
 
   .menu-item__text {
-    background-color: darkkhaki;
   }
 }

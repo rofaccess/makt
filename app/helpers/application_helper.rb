@@ -20,6 +20,11 @@ module ApplicationHelper
     "<a href='#{root_path}' data-turbo='false'><img src='#{image_path(logo_name)}' alt='MaKT'></a>".html_safe
   end
 
+  def icon_tag(icon_name, classes = nil)
+    icon_path = "svg/#{icon_name}.svg"
+    inline_svg_tag(icon_path, class: classes)
+  end
+
   def new_devise_session_text
     case controller_name
     when "registrations"
