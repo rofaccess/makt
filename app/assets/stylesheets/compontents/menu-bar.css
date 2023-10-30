@@ -19,10 +19,15 @@
   padding: 0 15px;
   gap: var(--menu-items-gap);
 
+  & li {
+    list-style: none;
+  }
+
   .menu-bar__shortcuts {
     display: flex;
     justify-content: space-between;
     gap: var(--menu-bar-items-gap);
-    overflow: scroll;
+
+    overflow: auto;
   }
 }

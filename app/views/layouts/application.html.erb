@@ -23,6 +23,8 @@
         <% menu_bar.with_menu(icon: "justify", text: "Menú") %>
       <% end %>
 
+      <%= render Menu::CollapsibleMenuComponent.new %>
+
       <div id="main-content">
         <%= yield %>
       </div>

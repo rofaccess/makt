@@ -1,6 +1,5 @@
-/* Include border and padding in boxes
-** From: https://css-tricks.com/box-sizing/
-*/
+/* Reset browser defaults */
+/* Include border and padding in boxes [https://css-tricks.com/box-sizing/] */
 html {
   box-sizing: border-box;
 }
@@ -9,7 +8,8 @@ html {
   box-sizing: inherit;
 }
 
-/* Reset browser defaults */
-body {
+/* Remove margin and padding from elements */
+body, ul {
   margin: 0;
+  padding: 0;
 }

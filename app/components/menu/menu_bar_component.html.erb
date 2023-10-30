@@ -1,17 +1,23 @@
-<div class="menu-bar">
-  <div class="menu-bar__home">
-    <%= home if home? %>
-  </div>
+<nav>
+  <ul class="menu-bar">
+    <li>
+      <%= home if home? %>
+    </li>
 
-  <div class="menu-bar__shortcuts">
-    <% if shortcuts.any? %>
-      <% shortcuts.each do |shortcut| %>
-        <%= shortcut %>
-      <% end %>
-    <% end %>
-  </div>
+    <li>
+      <ul class="menu-bar__shortcuts">
+        <% if shortcuts.any? %>
+          <% shortcuts.each do |shortcut| %>
+            <li>
+              <%= shortcut %>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </li>
 
-  <div class="menu-bar__menu">
-    <%= menu if menu? %>
-  </div>
-</div>
+    <li>
+      <%= menu if menu? %>
+    </li>
+  </ul>
+</nav>
