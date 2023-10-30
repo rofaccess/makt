@@ -17,17 +17,19 @@
   justify-content: space-between;
   align-items: center; /* Vertical align to center */
   padding: 0 15px;
-  gap: var(--menu-items-gap);
+  gap: var(--menu-bar-items-gap);
 
   & li {
     list-style: none;
+  }
+
+  .menu-bar__shortcuts-container {
+    overflow: auto;
   }
 
   .menu-bar__shortcuts {
     display: flex;
     justify-content: space-between;
     gap: var(--menu-bar-items-gap);
-
-    overflow: auto;
   }
 }
