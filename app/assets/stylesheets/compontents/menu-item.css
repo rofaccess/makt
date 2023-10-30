@@ -7,4 +7,15 @@
   /* Remove link defaults */
   color: var(--menu-bar-menu-item-color);
   text-decoration: none;
+
+  &:hover {
+    color: var(--menu-bar-menu-item-hover-color);
+    fill: var(--menu-bar-menu-item-hover-color);
+  }
+
+  /* Set icon size */
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
 }
