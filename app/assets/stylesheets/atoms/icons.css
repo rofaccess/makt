@@ -4,5 +4,5 @@
 }
 
 .icon--gray {
-    fill: #616161;
+    fill: var(--menu-bar-menu-item-color);
 }

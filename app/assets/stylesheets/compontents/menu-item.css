@@ -1,5 +1,10 @@
 .menu-item {
+  /* Show icon up and text down */
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* Remove link defaults */
+  color: var(--menu-bar-menu-item-color);
+  text-decoration: none;
 }
