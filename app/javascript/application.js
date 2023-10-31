@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function showAlert(origin) {
-  const element = document.getElementsByClassName("iconify iconify--system-uicons")[0];
-  element.onclick = function() { alert(origin) };
+  //const element = document.getElementsByClassName("iconify iconify--system-uicons")[0];
+  //element.onclick = function() { alert(origin) };
 }

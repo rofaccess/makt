@@ -1,11 +1,11 @@
-<nav>
-  <ul class="menu-bar">
+<nav class="menu-bar" data-controller="menu">
+  <ul>
     <li>
       <%= home if home? %>
     </li>
 
-    <li class="menu-bar__shortcuts-container">
-      <ul class="menu-bar__shortcuts">
+    <li class="menu-bar__shortcuts">
+      <ul>
         <% if shortcuts.any? %>
           <% shortcuts.each do |shortcut| %>
             <li>

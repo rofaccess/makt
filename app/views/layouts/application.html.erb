@@ -12,12 +12,13 @@
   <body>
     <div class="main-container">
       <%= render Menu::MenuBarComponent.new do |menu_bar| %>
-        <% menu_bar.with_home(icon: "dashboard", text: "Inicio") %>
+        <% menu_bar.with_home(icon: "dashboard", text: "Inicio", url: root_path, turbo: true) %>
 
         <% menu_bar.with_shortcuts([
           { icon: "warehouse", text: "Depósitos" },
           { icon: "boxes", text: "Productos" },
-          { icon: "arrow-repeat", text: "Movimientos" }
+          { icon: "arrow-repeat", text: "Movimientos" },
+          { icon: "tags", text: "Marcas", url: product_brands_path, turbo: true },
         ]) %>
 
         <% menu_bar.with_menu(icon: "justify", text: "Menú") %>

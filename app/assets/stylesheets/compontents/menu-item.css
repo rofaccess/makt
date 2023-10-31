@@ -5,12 +5,18 @@
   align-items: center;
 
   /* Remove link defaults */
-  color: var(--menu-bar-menu-item-color);
+  color: var(--menu-item-color);
   text-decoration: none;
+  letter-spacing: none;
 
-  &:hover {
-    color: var(--menu-bar-menu-item-hover-color);
-    fill: var(--menu-bar-menu-item-hover-color);
+  &:hover,
+  &[class~="menu-item--active"] {
+    color: var(--menu-item-active-color);
+    font-weight: bold;
+
+    /* Set svg to bold */
+    stroke-width: 1%;
+    stroke: var(--menu-item-active-color);
   }
 
   /* Set icon size */

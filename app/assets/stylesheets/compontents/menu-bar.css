@@ -1,4 +1,4 @@
-.menu-bar {
+.menu-bar > ul {
   background-color: var(--menu-bar-bg-color);
   box-shadow: 0 0 5px 1px lightgray;
   border-bottom: 6px solid var(--menu-bar-bd-color);
@@ -23,13 +23,13 @@
     list-style: none;
   }
 
-  .menu-bar__shortcuts-container {
-    overflow: auto;
-  }
-
   .menu-bar__shortcuts {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--menu-bar-items-gap);
+    overflow: auto;
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--menu-bar-items-gap);
+    }
   }
 }
