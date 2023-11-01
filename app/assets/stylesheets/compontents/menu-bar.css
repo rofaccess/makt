@@ -1,4 +1,4 @@
-.menu-bar > ul {
+.menu-bar {
   background-color: var(--menu-bar-bg-color);
   box-shadow: 0 0 0.3rem 0.05rem lightgray;
   border-bottom: 0.3rem solid var(--menu-bar-bd-color);
@@ -11,7 +11,9 @@
       position: fixed;
       width: 100%;
   }
+}
 
+.menu-bar > ul {
   display: flex; /* Display contents inline */
   justify-content: space-between;
   align-items: center; /* Vertical align to center */
@@ -20,16 +22,24 @@
 
   & li {
     list-style: none;
-    padding: 0.05rem; /* To avoid show scrollbar in menu-item scaling */
+  }
+
+  .menu-bar__shortcuts > ul {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--menu-bar-items-gap);
+  }
+}
+
+/* Scrollbar */
+.menu-bar > ul {
+  --menu-item-scaling-padding: 0.05rem;
+
+  & li {
+    padding: var(--menu-item-scaling-padding); /* Avoid show scrollbar when scaling menu-item */
   }
 
   .menu-bar__shortcuts {
     overflow: auto;
-
-    & ul {
-      display: flex;
-      justify-content: space-between;
-      gap: var(--menu-bar-items-gap);
-    }
   }
 }

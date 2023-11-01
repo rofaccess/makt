@@ -1,3 +1,7 @@
+:root {
+  --mobile-sz: 48rem; /* This can't read in media queries */
+}
+
 .menu-bar {
   --menu-bar-items-gap: 1.25rem;
 }
