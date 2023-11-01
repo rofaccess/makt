@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <div class="main-container">
+    <div id="main-container">
       <%= render Menu::MenuBarComponent.new do |menu_bar| %>
         <% menu_bar.with_home(icon: "dashboard", text: "Inicio", url: root_path, turbo: true) %>
 

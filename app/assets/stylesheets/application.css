@@ -24,3 +24,11 @@
   /* Don't change font size to use rem */
   /* font-size: 16px;  Note: Default font size is 16px. 1rem = 16px */
 }
+
+#main-container {
+  /* Mobile */
+  @media (width <= 48rem) {
+    /* Don't hide main-content below menu-bar */
+    margin-bottom: 5rem;
+  }
+}

@@ -2,6 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   activateMenuItem(event) {
+    debugger
     const menuItem = this.#getMenuItem(event.target)
 
     // Not is necessary manage active links when turbo is disabled
@@ -11,6 +12,19 @@ export default class extends Controller {
     this.#activateMenuItem(menuItem)
 
     this.#updateUrl(menuItem)
+  }
+
+  /* From: https://codepen.io/fauzanmy/pen/dyprKRd
+   * Note: Don't work in Firefox
+  */
+  runMouseWheelHorizontalScrolling(event) {
+    let shortcuts = event.target.closest(".menu-bar__shortcuts")
+    const race = 15 // How many pixels to scroll
+
+    if (event.deltaY > 0) shortcuts.scrollLeft += race // Scroll right
+    else shortcuts.scrollLeft -= race// Scroll left
+
+    event.preventDefault()
   }
 
   #turboDisabled(menuItem) {
