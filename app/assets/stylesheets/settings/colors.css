@@ -5,15 +5,12 @@
 }
 
 .menu-bar {
-  --menu-bar-height: 60px;
-  --menu-bar-items-gap: 20px;
-
-  /* colors */
   --menu-bar-bg-color: #FFFFFF;
   --menu-bar-bd-color: var(--primary-color);
 }
 
-.menu-bar {
+.menu-item {
   --menu-item-color: #616161;
+  --menu-item-hover-color: var(--primary-color);
   --menu-item-active-color: var(--primary-color);
 }

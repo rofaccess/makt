@@ -21,4 +21,6 @@
 :root {
   font-family: Lato, Roboto, sans-serif;
   font-weight: normal;
+  /* Don't change font size to use rem */
+  /* font-size: 16px;  Note: Default font size is 16px. 1rem = 16px */
 }

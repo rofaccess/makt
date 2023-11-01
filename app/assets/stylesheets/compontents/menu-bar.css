@@ -1,12 +1,11 @@
 .menu-bar > ul {
   background-color: var(--menu-bar-bg-color);
-  box-shadow: 0 0 5px 1px lightgray;
-  border-bottom: 6px solid var(--menu-bar-bd-color);
-  border-radius: 0 0 7px 7px;
-  height: var(--menu-bar-height);
+  box-shadow: 0 0 0.3rem 0.05rem lightgray;
+  border-bottom: 0.3rem solid var(--menu-bar-bd-color);
+  border-radius: 0 0 0.4rem 0.4rem;
 
   /* Mobile */
-  @media (width <= 768px) {
+  @media (width <= 48rem) {
       /* Show in bottom */
       bottom: 0;
       position: fixed;
@@ -16,11 +15,12 @@
   display: flex; /* Display contents inline */
   justify-content: space-between;
   align-items: center; /* Vertical align to center */
-  padding: 0 15px;
+  padding: 0.2rem 0.9rem;
   gap: var(--menu-bar-items-gap);
 
   & li {
     list-style: none;
+    padding: 0.05rem; /* To avoid show scrollbar in menu-item scaling */
   }
 
   .menu-bar__shortcuts {

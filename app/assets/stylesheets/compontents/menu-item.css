@@ -2,14 +2,18 @@
   /* Show icon up and text down */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   /* Remove link defaults */
   color: var(--menu-item-color);
   text-decoration: none;
-  letter-spacing: none;
 
-  &:hover,
+  &:hover {
+    color: var(--menu-item-hover-color);
+    transform: scale(1.05); /* Scale size animation */
+  }
+
   &[class~="menu-item--active"] {
     color: var(--menu-item-active-color);
     font-weight: bold;
@@ -20,8 +24,8 @@
   }
 
   /* Set icon size */
-  & svg {
-    width: 24px;
-    height: 24px;
+  & .icon {
+    width: 1.5rem;
+    height: 1.5rem;
   }
 }
