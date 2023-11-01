@@ -2,7 +2,6 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   activateMenuItem(event) {
-    debugger
     const menuItem = this.#getMenuItem(event.target)
 
     // Not is necessary manage active links when turbo is disabled

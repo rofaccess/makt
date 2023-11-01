@@ -1,21 +1,35 @@
-<nav class="collapsible-menu">
-  <ul class="collapsible-menu__header">
-      <li class="collapsible-menu__logo">
-        <div>Logo</div>
-      </li>
-      <li class="collapsible-menu__settings">
-        <ul>
-          <li>Tema</li>
-          <li>Mi Perfil</li>
-          <li>Cerrar Sesión</li>
-        </ul>
-      </li>
-  </ul>
+<div class="collapsible-menu">
+  <input type="checkbox" id="<%= @id %>" class="collapsible-menu__checkbox">
 
-    <ul class="collapsible-menu__items">
-      <li>Depósito 1</li>
-      <li>Depósito 2</li>
-      <li>Depósito2</li>
+  <!-- Don't use menu-item component because link_to interfere whith checkbox check when click label -->
+  <label class="menu-item" for="<%= @id %>">
+    <% if @icon %>
+      <%= icon_tag(@icon, "icon") %>
+    <% end %>
+
+    <span><%= @text %></span>
+  </label>
+
+  <nav>
+    <ul class="collapsible-menu__header">
+        <li class="collapsible-menu__logo">
+          <div>Logo</div>
+        </li>
+        <li class="collapsible-menu__settings">
+          <ul>
+            <li>Tema</li>
+            <li>Mi Perfil</li>
+            <li>Cerrar Sesión</li>
+          </ul>
+        </li>
     </ul>
-  </ul>
-</nav>
+
+      <ul class="collapsible-menu__items">
+        <li>Depósito 1</li>
+        <li>Depósito 2</li>
+        <li>Depósito2</li>
+      </ul>
+    </ul>
+  </nav>
+</div>
+

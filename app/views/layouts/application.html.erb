@@ -21,10 +21,8 @@
           { icon: "tags", text: "Marcas", url: product_brands_path, turbo: true },
         ]) %>
 
-        <% menu_bar.with_menu(icon: "justify", text: "Menú") %>
+        <% menu_bar.with_collapsible_menu(icon: "justify", text: "Menú", id: "main-menu") %>
       <% end %>
-
-      <%= render Menu::CollapsibleMenuComponent.new %>
 
       <div id="main-content">
         <%= yield %>
