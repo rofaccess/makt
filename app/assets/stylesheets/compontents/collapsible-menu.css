@@ -37,24 +37,25 @@
   }
 
   /* Unfolded menu position */
-  &[class~="collapsible-menu--default"] {
-    & nav {
-      left: initial;
-      right: initial;
+  /* Default position */
+  & nav {
+    left: initial;
+    right: initial;
 
-      /* Mobile */
-      @media (width <= 48rem) {
-        left: 0;
-      }
+    /* Mobile */
+    @media (width <= 48rem) {
+      left: 0;
     }
   }
 
+  /* Left position */
   &[class~="collapsible-menu--left"] {
     & nav {
       left: 0;
     }
   }
 
+  /* Right position */
   &[class~="collapsible-menu--right"] {
     & nav {
       right: 0;

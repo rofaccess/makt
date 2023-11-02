@@ -3,13 +3,15 @@
 class Menu::MenuItemComponent < ViewComponent::Base
   include ApplicationHelper
 
-  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, link: true)
+  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, link: true, size: nil, inline: false)
     @icon = icon
     @text = text
     @url = url
     @turbo = turbo
     @active = active
     @link = link
+    @size = size # Opts: sm or lg
+    @inline = inline # Show icon and text inline
   end
 
   private
@@ -19,9 +21,15 @@ class Menu::MenuItemComponent < ViewComponent::Base
     @active = (@active || request.path == @url)
   end
 
-  def menu_item_class
-    classes = +"menu-item" # The + is for modify frozen variable or create not frozen variable?
-    classes << " menu-item--active" if @active
+  def block_class
+    "menu-item"
+  end
+
+  def block_modifier_classes
+    classes = +block_class # The + is for modify frozen variable or create not frozen variable?
+    classes << " #{block_class}--active" if @active
+    classes << " #{block_class}--#{@size}" if @size
+    classes << " #{block_class}--inline" if @inline
     classes
   end
 end

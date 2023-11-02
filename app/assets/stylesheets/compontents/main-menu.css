@@ -1,6 +1,7 @@
 .main-menu .main-menu__header {
   display: flex;
   justify-content: space-between;
+  gap: 1.5rem;
 
   & .main-menu__logo {
     & img {
@@ -12,5 +13,6 @@
   & .main-menu__settings > ul {
     display: flex;
     justify-content: space-between;
+    gap: 1.5rem;
   }
 }

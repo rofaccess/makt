@@ -1,15 +1,15 @@
-<div class="<%= menu_item_class %>">
+<div class="<%= block_modifier_classes %>">
   <% if @link %>
     <!-- Set data-turbo-stream attr in link because turbo is not enable for get requests by default -->
-    <a data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>" data-turbo-stream="" href="<%= @url %>">
+    <a class="<%= block_class %>__link" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>" data-turbo-stream="" href="<%= @url %>">
   <% else %>
-    <a data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>">
+    <a class="<%= block_class %>__link" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>">
   <% end %>
 
       <% if @icon %>
-        <%= icon_tag(@icon, "icon") %>
+        <%= icon_tag(@icon, "#{block_class}__icon") %>
       <% end %>
 
-      <span class="prevent-select"><%= @text %></span>
+      <span class="<%= block_class %>__text prevent-select"><%= @text %></span>
   </a>
 </div>

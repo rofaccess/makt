@@ -1,8 +1,8 @@
 .menu-item {
-  padding: 0.03rem; /* Avoid show scrollbar when scaling menu-item */
+  /*padding: 0.03rem; /* Avoid show scrollbar when scaling menu-item */
 }
 
-.menu-item > a {
+.menu-item > .menu-item__link {
   /* Show icon up and text down */
   display: flex;
   flex-direction: column;
@@ -15,16 +15,19 @@
 
   &:hover {
     color: var(--menu-item-hover-color);
-    transform: scale(1.02); /* Scale size animation */
+    /*transform: scale(1.02); /* Scale size animation */
+
+    /* Set svg icon to bold */
+    stroke-width: 1%;
+    stroke: var(--menu-item-active-color);
   }
 
-  /* Set icon size */
-  & .icon {
-    width: 1.5rem;
-    height: 1.5rem;
+  .menu-item__icon {
+    width: var(--menu-item-icon-md);
+    height: var(--menu-item-icon-md);
   }
 
-  & span {
+  .menu-item__text {
     /* Prevent break work in two lines when overflow */
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -32,11 +35,31 @@
   }
 }
 
-.menu-item--active > a {
+.menu-item--active > .menu-item__link {
   color: var(--menu-item-active-color);
   font-weight: bold;
 
-  /* Set svg to bold */
+  /* Set svg icon to bold */
   stroke-width: 1%;
   stroke: var(--menu-item-active-color);
+}
+
+.menu-item--sm > .menu-item__link {
+  .menu-item__icon {
+    width: var(--menu-item-icon-sm);
+    height: var(--menu-item-icon-sm);
+  }
+
+  .menu-item__text {
+    font-size: var(--menu-item-text-sm);
+  }
+}
+
+.menu-item--inline > .menu-item__link {
+  /* Show icon left and text right */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }

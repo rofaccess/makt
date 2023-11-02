@@ -5,3 +5,11 @@
 .menu-bar {
   --menu-bar-items-gap: 1.25rem;
 }
+
+.menu-item {
+  --menu-item-icon-sm: 0.938rem;
+  --menu-item-icon-md: 1.5rem;
+
+  --menu-item-text-sm: var(--menu-item-icon-sm);
+  --menu-item-text-md: 1rem;
+}
