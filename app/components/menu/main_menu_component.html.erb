@@ -1,0 +1,45 @@
+<%= render Menu::CollapsibleMenuComponent.new(icon: "justify", text: "Menú", id: "main-menu", position: :right) do %>
+  <div class="main-menu">
+    <ul class="main-menu__header">
+      <li class="main-menu__logo">
+        <%= logo_tag %>
+      </li>
+      <li class="main-menu__settings">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "person", text: "Mi Perfil") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "box-arrow-left", text: "Cerrar Sesión") %></li>
+        </ul>
+      </li>
+    </ul>
+
+    <!--
+      <ul class="main-menu__header">
+        <li class="main-menu__logo">
+          <div>Logo</div>
+        </li>
+        <li class="main-menu__settings">
+          <ul>
+            <li>Tema</li>
+            <li>Mi Perfil</li>
+            <li>Cerrar Sesión</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="main-menu__items">
+        <li>Depósito 1</li>
+        <li>Depósito 2</li>
+        <li>Depósito2</li>
+      </ul>
+      </ul>
+      -->
+
+      <!--
+      <ul class='sub-menu'>
+        <li>Web Design</li>
+        <li>Web Development</li>
+        <li>Illustrations</li>
+      </ul>
+      -->
+  </div>
+<% end %>

@@ -1,43 +1,21 @@
-<div class="collapsible-menu">
+<div class="collapsible-menu collapsible-menu--<%= @position %>">
   <input type="checkbox" id="<%= @id %>" class="collapsible-menu__checkbox">
 
-  <!-- Don't use menu-item component because link_to interfere whith checkbox check when click label -->
-  <label class="menu-item" for="<%= @id %>">
-    <% if @icon %>
-      <%= icon_tag(@icon, "icon") %>
-    <% end %>
-
-    <span class="prevent-select"><%= @text %></span>
+  <label for="<%= @id %>">
+    <!-- Use link: false to render a link without href because interfere whith checkbox check when click label -->
+    <%= render Menu::MenuItemComponent.new(icon: @icon, text: @text, link: false) %>
   </label>
 
-  <!-- en horizontal en mobile esta mostrando espacio extra en vertical a veces tambien hay scroll del body-->
   <nav>
-  <!--
-    <ul class="collapsible-menu__header">
-      <li class="collapsible-menu__logo">
-        <div>Logo</div>
-      </li>
-      <li class="collapsible-menu__settings">
-        <ul>
-          <li>Tema</li>
-          <li>Mi Perfil</li>
-          <li>Cerrar Sesión</li>
-        </ul>
-      </li>
+    <% if content? %>
+      <%= content %>
+    <% else %>
+      <!-- Example content -->
+      <ul>
+        <li>Menu Item 1</li>
+        <li>Menu Item 2</li>
+        <li>Menu Item 3</li>
     </ul>
-
-    <ul class="collapsible-menu__items">
-      <li>Depósito 1</li>
-      <li>Depósito 2</li>
-      <li>Depósito2</li>
-    </ul>
-    </ul>
-    -->
-    <ul class='sub-menu'>
-      <li>Web Design</li>
-      <li>Web Development</li>
-      <li>Illustrations</li>
-    </ul>
+    <% end %>
   </nav>
 </div>
-

@@ -1,8 +1,15 @@
-<!-- Set data-turbo-stream attr in link because turbo is not enable for get requests by default -->
-<%= link_to @url, class: menu_item_class, data: { action: "click->menu#activateMenuItem", turbo: @turbo, turbo_stream: "" } do %>
-  <% if @icon %>
-    <%= icon_tag(@icon, "icon") %>
+<div class="<%= menu_item_class %>">
+  <% if @link %>
+    <!-- Set data-turbo-stream attr in link because turbo is not enable for get requests by default -->
+    <a data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>" data-turbo-stream="" href="<%= @url %>">
+  <% else %>
+    <a data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>">
   <% end %>
 
-  <span class="prevent-select"><%= @text %></span>
-<% end %>
+      <% if @icon %>
+        <%= icon_tag(@icon, "icon") %>
+      <% end %>
+
+      <span class="prevent-select"><%= @text %></span>
+  </a>
+</div>

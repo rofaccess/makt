@@ -21,18 +21,22 @@ export default class extends Controller {
     const race = 15 // How many pixels to scroll
 
     if (event.deltaY > 0) shortcuts.scrollLeft += race // Scroll right
-    else shortcuts.scrollLeft -= race// Scroll left
+    else shortcuts.scrollLeft -= race // Scroll left
 
     event.preventDefault()
   }
 
   #turboDisabled(menuItem) {
-    const turboStatus = menuItem.getAttribute("data-turbo")
+    const turboStatus = this.#getLink(menuItem).getAttribute("data-turbo")
     return turboStatus === "false" ? true : false
   }
 
   #getMenuItem(eventTarget) {
     return eventTarget.closest(".menu-item")
+  }
+
+  #getLink(menuItem) {
+    return menuItem.querySelector("a")
   }
 
   #activateMenuItem(menuItem) {
@@ -42,13 +46,12 @@ export default class extends Controller {
   #deactivateMenuItems(thisElement) {
     const activeMenuItems = thisElement.getElementsByClassName("menu-item menu-item--active")
     Array.from(activeMenuItems).forEach((element) => element.classList.remove("menu-item--active"))
-    console.log(activeMenuItems)
   }
 
   #updateUrl(menuItem) {
     // From: https://www.30secondsofcode.org/js/s/modify-url-without-reload/
     const origin = window.location.origin
-    const pathName = menuItem.getAttribute("href")
+    const pathName = this.#getLink(menuItem).getAttribute("href")
     const nextURL = origin + pathName
     const nextTitle = ""
     const nextState = { additionalInformation: "Updated the URL with JS" }

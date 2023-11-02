@@ -20,30 +20,17 @@
   padding: 0.2rem 0.9rem;
   gap: var(--menu-bar-items-gap);
 
-  & > li {
+  & li {
     list-style: none;
   }
 
-  .menu-bar__shortcuts > ul {
-    display: flex;
-    justify-content: space-between;
-    gap: var(--menu-bar-items-gap);
-
-    & > li {
-      list-style: none;
-    }
-  }
-}
-
-/* Scrollbar */
-.menu-bar > ul {
-  --menu-item-scaling-padding: 0.05rem;
-
-  & > li {
-    padding: var(--menu-item-scaling-padding); /* Avoid show scrollbar when scaling menu-item */
-  }
-
   .menu-bar__shortcuts {
-    overflow: auto;
+    overflow: auto; /* Show scrollbar if is necessary */
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--menu-bar-items-gap);
+    }
   }
 }

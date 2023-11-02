@@ -1,0 +1,16 @@
+.main-menu .main-menu__header {
+  display: flex;
+  justify-content: space-between;
+
+  & .main-menu__logo {
+    & img {
+      width: 43px;
+      height: 46px;
+    }
+  }
+
+  & .main-menu__settings > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+}

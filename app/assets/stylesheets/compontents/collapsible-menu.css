@@ -5,25 +5,25 @@
     /* Show nav when click in checkbox label */
     &:checked ~ nav {
       visibility: visible;
-      transition: all 5s linear;
+      transition: all 3s ease-out;
       max-height: 100%;
 
       /* Mobile */
       @media (width <= 48rem) {
         /* Align to top of parent element [https://codepen.io/ngaller/pen/GpzZXN] */
         bottom: 100%;
-        transition: all 0.4s linear;
+        transition: all 0.4s ease-out;
       }
     }
   }
 
   & nav {
-    background-color: var(--menu-collapsible-bg-color);
+    background-color: var(--collapsible-menu-bg-color);
     backdrop-filter: blur(15px);
 
+    padding: 1rem;
     visibility: hidden;
     position: absolute;
-    right: 0;
     max-height: 0;
     overflow: hidden; /* For unfold efect */
 
@@ -31,7 +31,33 @@
 
     /* Mobile */
     @media (width <= 48rem) {
+      margin-top: 0;
       width: 100vw;
+    }
+  }
+
+  /* Unfolded menu position */
+  &[class~="collapsible-menu--default"] {
+    & nav {
+      left: initial;
+      right: initial;
+
+      /* Mobile */
+      @media (width <= 48rem) {
+        left: 0;
+      }
+    }
+  }
+
+  &[class~="collapsible-menu--left"] {
+    & nav {
+      left: 0;
+    }
+  }
+
+  &[class~="collapsible-menu--right"] {
+    & nav {
+      right: 0;
     }
   }
 }
