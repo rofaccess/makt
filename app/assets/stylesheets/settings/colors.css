@@ -13,3 +13,7 @@
   --menu-item-hover-color: var(--primary-color);
   --menu-item-active-color: var(--primary-color);
 }
+
+.collapsible-menu {
+  --menu-collapsible-bg-color: rgba(76, 93, 101, 7%);
+}

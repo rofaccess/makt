@@ -1,29 +1,37 @@
 .collapsible-menu {
-  position: relative;
-
   .collapsible-menu__checkbox {
     display: none;
 
     /* Show nav when click in checkbox label */
     &:checked ~ nav {
-      border: 1px solid red;
       visibility: visible;
-      transition: all 0.4s linear;
+      transition: all 5s linear;
       max-height: 100%;
-      background-color: gray;
 
       /* Mobile */
       @media (width <= 48rem) {
         /* Align to top of parent element [https://codepen.io/ngaller/pen/GpzZXN] */
         bottom: 100%;
+        transition: all 0.4s linear;
       }
     }
   }
 
   & nav {
-    display: block;
+    background-color: var(--menu-collapsible-bg-color);
+    backdrop-filter: blur(15px);
+
     visibility: hidden;
     position: absolute;
-    max-height: 0px;
+    right: 0;
+    max-height: 0;
+    overflow: hidden; /* For unfold efect */
+
+    margin-top: 0.7rem;
+
+    /* Mobile */
+    @media (width <= 48rem) {
+      width: 100vw;
+    }
   }
 }

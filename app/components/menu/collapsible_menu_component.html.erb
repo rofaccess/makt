@@ -7,28 +7,36 @@
       <%= icon_tag(@icon, "icon") %>
     <% end %>
 
-    <span><%= @text %></span>
+    <span class="prevent-select"><%= @text %></span>
   </label>
 
+  <!-- en horizontal en mobile esta mostrando espacio extra en vertical a veces tambien hay scroll del body-->
   <nav>
+  <!--
     <ul class="collapsible-menu__header">
-        <li class="collapsible-menu__logo">
-          <div>Logo</div>
-        </li>
-        <li class="collapsible-menu__settings">
-          <ul>
-            <li>Tema</li>
-            <li>Mi Perfil</li>
-            <li>Cerrar Sesión</li>
-          </ul>
-        </li>
+      <li class="collapsible-menu__logo">
+        <div>Logo</div>
+      </li>
+      <li class="collapsible-menu__settings">
+        <ul>
+          <li>Tema</li>
+          <li>Mi Perfil</li>
+          <li>Cerrar Sesión</li>
+        </ul>
+      </li>
     </ul>
 
-      <ul class="collapsible-menu__items">
-        <li>Depósito 1</li>
-        <li>Depósito 2</li>
-        <li>Depósito2</li>
-      </ul>
+    <ul class="collapsible-menu__items">
+      <li>Depósito 1</li>
+      <li>Depósito 2</li>
+      <li>Depósito2</li>
+    </ul>
+    </ul>
+    -->
+    <ul class='sub-menu'>
+      <li>Web Design</li>
+      <li>Web Development</li>
+      <li>Illustrations</li>
     </ul>
   </nav>
 </div>
