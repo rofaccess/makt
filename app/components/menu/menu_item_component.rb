@@ -3,13 +3,13 @@
 class Menu::MenuItemComponent < ViewComponent::Base
   include ApplicationHelper
 
-  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, link: true, size: nil, inline: false)
+  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, href: true, size: nil, inline: false)
     @icon = icon
     @text = text
     @url = url
     @turbo = turbo
     @active = active
-    @link = link
+    @href = href
     @size = size # Opts: sm or lg
     @inline = inline # Show icon and text inline
   end

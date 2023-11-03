@@ -5,14 +5,19 @@
 
   & .main-menu__logo {
     & img {
-      width: 43px;
-      height: 46px;
+      width: 2.5rem; /* 40px */
+      height: 2.688rem; /* 43px */
     }
   }
 
-  & .main-menu__settings > ul {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
+  & .main-menu__settings {
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+
+      border-bottom: 0.063rem solid #CCCCCC;
+      padding-bottom: 0.3rem;
+    }
   }
 }

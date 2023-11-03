@@ -1,10 +1,10 @@
 <%= render Menu::CollapsibleMenuComponent.new(icon: "justify", text: "Menú", id: "main-menu", position: :right) do %>
-  <div class="main-menu">
-    <ul class="main-menu__header">
-      <li class="main-menu__logo">
+  <div class="<%= block_modifier_classes %>">
+    <ul class="<%= block_class %>__header">
+      <li class="<%= block_class %>__logo">
         <%= logo_tag %>
       </li>
-      <li class="main-menu__settings">
+      <li class="<%= block_class %>__settings">
         <ul>
           <li><%= render Menu::MenuItemComponent.new(icon: "person", text: "Mi Perfil", inline: true, size: :sm) %></li>
           <li><%= render Menu::MenuItemComponent.new(icon: "box-arrow-left", text: "Cerrar Sesión", inline: true, size: :sm) %></li>

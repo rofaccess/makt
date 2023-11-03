@@ -1,7 +1,7 @@
 module ApplicationHelper
   def logo_color
     # Alternatives: blue, green, lilac
-    "lilac"
+    "blue"
   end
 
   def logo_name

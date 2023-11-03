@@ -1,10 +1,10 @@
-<nav class="menu-bar" data-controller="menu">
+<nav class="<%= block_modifier_classes %>" data-controller="menu">
   <ul>
     <li>
       <%= home if home? %>
     </li>
 
-    <li class="menu-bar__shortcuts" data-action="mousewheel->menu#runMouseWheelHorizontalScrolling">
+    <li class="<%= block_class %>__shortcuts" data-action="mousewheel->menu#runMouseWheelHorizontalScrolling">
       <ul>
         <% if shortcuts.any? %>
           <% shortcuts.each do |shortcut| %>

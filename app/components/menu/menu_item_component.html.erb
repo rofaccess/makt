@@ -1,5 +1,5 @@
 <div class="<%= block_modifier_classes %>">
-  <% if @link %>
+  <% if @href %>
     <!-- Set data-turbo-stream attr in link because turbo is not enable for get requests by default -->
     <a class="<%= block_class %>__link" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>" data-turbo-stream="" href="<%= @url %>">
   <% else %>
