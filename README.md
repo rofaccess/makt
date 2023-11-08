@@ -1,16 +1,17 @@
 # README
 
 ## Estructura del Proyecto
-### HTML y CSS
-Para organizar el HTML y el CSS se tienen en cuenta las siguientes cuestiones:
+### Arquitectura CSS
+Para organizar los estilos se consideran las siguientes cuestiones:
 1. Nomenclatura de clases CSS: nomenclatura BEM y prefijos.
-2. Estructura de carpetas y archivos de estilos: elements, subcomponets, components, utilities, generic, settings.
-3. Estructura del layout: elements, subcomponents, components.
+2. Estructura de carpetas y archivos de estilos según ITCSS: settings, generic, elements, objects, components, utilities.
+3. Estructura del layout: elements, objects, components.
 
+Los puntos 1 y 2 se combinan en la metodología BEMIT (BEM + ITCSS). El punto 3 está basado en Atomic Design y define como abstraer conceptos para ayudar a estructurar la implementación de interfaces.
 
 #### 1. Nomenclatura de clases CSS
 
-Para organizar el HTML y el CSS se usa la metodología BEMIT (BEM + ITCSS). BEM es una forma de nombrar las clases CSS e ITCSS es un sistema para organizar los archivos y carpetas de los estilos css.
+BEM es una forma de nombrar las clases CSS e ITCSS es un sistema para organizar los archivos y carpetas de los estilos css.
 Las siglas de BEM significan lo siguiente:
 - B de bloque.
 - E de elemento.
@@ -50,7 +51,7 @@ Ejecucion de pruebas especificas
 bundle exec rspec spec/components/sidebar/submenu_component_spec.rb:44
 
 
-atomic design es mas para el diseño de interfaces, yo extrapolo un poco esas ideas con otra nomenclatura para tener conceptos abstractos que me ayuden a estructurar la implementacion de las interfaces
+
 
 https://www.uifrommars.com/diseno-sombras-interfaz/
 https://www.uifrommars.com/que-es-shape-up/
