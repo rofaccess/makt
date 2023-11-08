@@ -11,23 +11,35 @@ Los puntos 1 y 2 se combinan en la metodología BEMIT (BEM + ITCSS). El punto 3 
 
 #### 1. Nomenclatura de clases CSS
 
-BEM es una forma de nombrar las clases CSS e ITCSS es un sistema para organizar los archivos y carpetas de los estilos css.
+BEM es una forma de nombrar las clases CSS.
 Las siglas de BEM significan lo siguiente:
 - B de bloque.
 - E de elemento.
 - M de modificador.
 
 BEM tiene la siguiente estructura básica:
-- block: navbar, main-navbar
-- block__element: navbar__header, navbar__main-header
-- block__element-modifier: navbar--red, navbar--big, navbar__header--small
+- **block:** navbar, main-navbar
+- **block__element:** navbar__header, navbar__main-header
+- **block__element-modifier:** navbar--red, navbar--big, navbar__header--small
 
-*Obs.: * No sé si hay desventajas de usar nesting de css para organizar los elementos dentro del bloque.
+**Obs.:** No sé si hay desventajas de usar nesting de css para organizar los elementos dentro del bloque.
+
+**Prefijos**
+
+
+
+#### 1. Estructura de carpetas y archivos de estilos según ITCSS
+
+ITCSS es un sistema para organizar los archivos y carpetas de los estilos css. Los estilos se dividen en capas de lo más general a lo más especifico, por ejemplo, en la capa settings están las variables que son utilizadas por todas las capas, y en las últimas están los utilities y scopes que tienen estilos muy especificos. Las capas superiores afectan a las inferiores pero nunca al contrario. Tener en cuenta que el uso de ITCSS que se realiza aquí es una adaptación, así que en algunos casos no se respetan los concepts tal cual, como ser los conceptos de la capa objects y utilites, además que al utilizar BEMIT se agrega otra variante.
 
 Para organizar los estilos se tienen las siguientes carpetas:
-- elements: Puede considerarse como el equivalente a atoms en Atomic Design. Corresponde a los estilos de los elementos más pequeños, como ser: label, button, input. Exagerando, hasta podrían tener correspondencia exacta con los tags de html pero sin estilizar los tags html directamente, sino a través de clases como .btn, .btn-primary, btn-cancel, .icon, .label, etc.
-- subcomponents: Puede considerarse como el equivalente a molecules en Atomic Design, también se le puede llamar groups o elements-group ya que agrupan varios elements. Corresponde a los estilos de un grupo de elementos: icono + tipografia (menu item), campo de texto + tipografia (form item, form input o input group). Para que algo pueda considerarse un subcomponent debe cumplir con dos criterios: 1. Son la suma de más de un element . Ej. menu-item (icon + label). También puede ser la suma de otros subcomponents y elements 2. Sólo tienen sentido o razón de ser dentro un component. Ej. El menu-item solo tiene sentido dentro de los components menu-bar o sidebar pero no se pueden usar directamente en el layout. Los criterios mencionados son para agrupar cosas que parecen componentes por ser un poco complejos pero no lo son. *Obs.:* En los view component, al menu-item se los considera como components, ya que en ese nivel corresponden a componentes reutilizables dentro de otros components aunque por si mismos no tengan razón de ser, pero en HTML y CSS los tratamos como subcomponents deacuerdo a los dos criterios indicados antes.
-- components: Puede considerarse como el equivalente a organisms en Atomic Design. Corresponde a los estilos de los componentes que son la suma de varios elementos y/o grupos, como ser: menu-bar, sidebar, form, etc. Los componentes conforman el layout de la aplicación (El layout podría considerarse como la suma de varios componentes).
+- **00_settings:** Se definen las propiedades de css que se utilizan en otras capas, como ser colores, tamaños, etc. También incluye las variables usadas por preprocesadores.
+- **01_generic:** Código generico para resetear o estandarizar los estilos base de los navegadores. También puede incluir algunos estilos del layout.
+- **02_elements:** Corresponde a los estilos de los elementos más pequeños, como ser: label, button, input. Exagerando, hasta podrían tener correspondencia exacta con los tags de html pero sin estilizar los tags html directamente, sino a través de clases como .btn, .btn-primary, btn-cancel, .icon, .label, etc.
+- **03_objects:** Son estilos de grupos de elements que se utilizan en todo el proyecto: icono + tipografia (menu item), campo de texto + tipografia (form item, form input o input group). Para que algo pueda considerarse un object debe cumplir con dos criterios: 1. Son la suma de más de un element . Ej. menu-item (icon + label). También puede ser la suma de otros objects y elements 2. Sólo tienen sentido o razón de ser dentro un component. Ej. El menu-item solo tiene sentido dentro de los components menu-bar o sidebar pero no se pueden usar directamente en el layout. Los criterios mencionados son para agrupar cosas que parecen components por ser un poco complejos pero no lo son. **Obs.:** En los view component, al menu-item se los considera como components, ya que en ese nivel corresponden a components reutilizables dentro de otros components aunque por si mismos no tengan razón de ser, pero en HTML y CSS los tratamos como objects deacuerdo a los dos criterios indicados antes. Según [este tutorial](https://apiumhub.com/es/tech-blog-barcelona/arquitectura-de-triangulo-invertido-para-css-itcss/) los containers también son objects, pero prefiero poner los containers en generic o en utilities. Tal vez esto tenga que ver con que se está usando BEMIT y no ITCSS, y es como que no cuadra por completo con ITCSS.
+- **04_components:** Puede considerarse como el equivalente a organisms en Atomic Design. Corresponde a los estilos de los componentes que son la suma de varios elementos y/o grupos, como ser: menu-bar, sidebar, form, etc. Los componentes conforman el layout de la aplicación (El layout podría considerarse como la suma de varios componentes).
+- **05_utilities:** Una clase de utilidad es una clase independiente, es decir, que no son ni bloque, ni elemento, ni modificador
+- **06_scopes:** Abarca los estilos que se usan para modificar estilos de terceros, por ejemplo cuando se usa algún framework.
 
 
 #### Prefijos de clases
