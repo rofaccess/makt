@@ -1,0 +1,7 @@
+#main-container {
+  /* Mobile */
+  @media (width <= 48rem) {
+    /* Don't hide main-content below menu-bar */
+    margin-bottom: 5rem;
+  }
+}

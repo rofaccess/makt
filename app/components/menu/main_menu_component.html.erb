@@ -12,34 +12,31 @@
       </li>
     </ul>
 
-    <!--
-      <ul class="main-menu__header">
-        <li class="main-menu__logo">
-          <div>Logo</div>
-        </li>
-        <li class="main-menu__settings">
-          <ul>
-            <li>Tema</li>
-            <li>Mi Perfil</li>
-            <li>Cerrar Sesión</li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="main-menu__items">
-        <li>Depósito 1</li>
-        <li>Depósito 2</li>
-        <li>Depósito2</li>
-      </ul>
-      </ul>
-      -->
-
-      <!--
-      <ul class='sub-menu'>
-        <li>Web Design</li>
-        <li>Web Development</li>
-        <li>Illustrations</li>
-      </ul>
-      -->
+    <ul class="<%= block_class %>__items">
+      <li class="<%= block_class %>__items-group-title" >
+        Inventario
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2") %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas") %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group-title" >
+        Inventario
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios") %></li>
+        </ul>
+      </li>
+    </ul>
   </div>
 <% end %>
