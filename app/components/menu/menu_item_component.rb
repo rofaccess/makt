@@ -22,7 +22,7 @@ class Menu::MenuItemComponent < ViewComponent::Base
   end
 
   def block_class
-    "menu-item"
+    "o-menu-item"
   end
 
   def block_modifier_classes

@@ -1,5 +1,5 @@
-.collapsible-menu {
-  .collapsible-menu__checkbox {
+.c-collapsible-menu {
+  .c-collapsible-menu__checkbox {
     display: none;
 
     /* Show nav when click in checkbox label */
@@ -18,7 +18,7 @@
   }
 
   & nav {
-    background-color: var(--collapsible-menu-bg-color);
+    background-color: var(--c-collapsible-menu-bg-color);
     backdrop-filter: blur(15px);
 
     padding: 1rem;
@@ -49,14 +49,14 @@
   }
 
   /* Left position */
-  &[class~="collapsible-menu--left"] {
+  &[class~="c-collapsible-menu--left"] {
     & nav {
       left: 0;
     }
   }
 
   /* Right position */
-  &[class~="collapsible-menu--right"] {
+  &[class~="c-collapsible-menu--right"] {
     & nav {
       right: 0;
     }

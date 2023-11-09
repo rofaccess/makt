@@ -3,17 +3,17 @@
   --secondary-color: #186E96;
 }
 
-.menu-bar {
-  --menu-bar-bg-color: #FFFFFF;
-  --menu-bar-bd-color: var(--primary-color);
+.o-menu-item {
+  --o-menu-item-color: #616161;
+  --o-menu-item-hover-color: var(--primary-color);
+  --o-menu-item-active-color: var(--primary-color);
 }
 
-.menu-item {
-  --menu-item-color: #616161;
-  --menu-item-hover-color: var(--primary-color);
-  --menu-item-active-color: var(--primary-color);
+.c-menu-bar {
+  --c-menu-bar-bg-color: #FFFFFF;
+  --c-menu-bar-bd-color: var(--primary-color);
 }
 
-.collapsible-menu {
-  --collapsible-menu-bg-color: rgba(76, 93, 101, 7%);
+.c-collapsible-menu {
+  --c-collapsible-menu-bg-color: rgba(76, 93, 101, 7%);
 }

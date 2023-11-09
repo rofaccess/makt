@@ -1,16 +1,16 @@
-.main-menu .main-menu__header {
+.c-main-menu .c-main-menu__header {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
 
-  & .main-menu__logo {
+  & .c-main-menu__logo {
     & img {
       width: 2.5rem; /* 40px */
       height: 2.688rem; /* 43px */
     }
   }
 
-  & .main-menu__settings {
+  & .c-main-menu__settings {
     & ul {
       display: flex;
       justify-content: space-between;

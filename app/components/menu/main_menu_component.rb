@@ -6,7 +6,7 @@ class Menu::MainMenuComponent < ViewComponent::Base
   private
 
   def block_class
-    "main-menu"
+    "c-main-menu"
   end
 
   def block_modifier_classes

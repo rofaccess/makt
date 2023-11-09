@@ -8,7 +8,7 @@ class Menu::MenuBarComponent < ViewComponent::Base
   private
 
   def block_class
-    "menu-bar"
+    "c-menu-bar"
   end
 
   def block_modifier_classes

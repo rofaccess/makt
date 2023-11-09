@@ -12,7 +12,7 @@ class Menu::CollapsibleMenuComponent < ViewComponent::Base
   private
 
   def block_class
-    "collapsible-menu"
+    "c-collapsible-menu"
   end
 
   def block_modifier_classes

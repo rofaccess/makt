@@ -2,14 +2,14 @@
   --mobile-sz: 48rem; /* This can't read in media queries */
 }
 
-.menu-bar {
-  --menu-bar-items-gap: 1.25rem;
+.o-menu-item {
+  --o-menu-item-icon-sm: 0.938rem;
+  --o-menu-item-icon-md: 1.5rem;
+
+  --o-menu-item-text-sm: var(--menu-item-icon-sm);
+  --o-menu-item-text-md: 1rem;
 }
 
-.menu-item {
-  --menu-item-icon-sm: 0.938rem;
-  --menu-item-icon-md: 1.5rem;
-
-  --menu-item-text-sm: var(--menu-item-icon-sm);
-  --menu-item-text-md: 1rem;
+.c-menu-bar {
+  --c-menu-bar-items-gap: 1.25rem;
 }

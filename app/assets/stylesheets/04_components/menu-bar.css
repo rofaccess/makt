@@ -1,7 +1,7 @@
-.menu-bar {
-  background-color: var(--menu-bar-bg-color);
+.c-menu-bar {
+  background-color: var(--c-menu-bar-bg-color);
   box-shadow: 0 0 0.3rem 0.05rem lightgray;
-  border-bottom: 0.3rem solid var(--menu-bar-bd-color);
+  border-bottom: 0.3rem solid var(--c-menu-bar-bd-color);
   border-radius: 0 0 0.4rem 0.4rem;
 
   /* Mobile */
@@ -13,24 +13,24 @@
   }
 }
 
-.menu-bar > ul {
+.c-menu-bar > ul {
   display: flex; /* Display contents inline */
   justify-content: space-between;
   align-items: center; /* Vertical align to center */
   padding: 0.2rem 0.9rem;
-  gap: var(--menu-bar-items-gap);
+  gap: var(--c-menu-bar-items-gap);
 
   & li {
     list-style: none;
   }
 
-  .menu-bar__shortcuts {
+  .c-menu-bar__shortcuts {
     overflow: auto; /* Show scrollbar if is necessary */
 
     & ul {
       display: flex;
       justify-content: space-between;
-      gap: var(--menu-bar-items-gap);
+      gap: var(--c-menu-bar-items-gap);
     }
   }
 }
