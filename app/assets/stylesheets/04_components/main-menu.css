@@ -35,12 +35,12 @@
 
   & .c-main-menu__items-group {
     & ul {
-      display: flex;
-      justify-content: start;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr; /* Same width in all elements */
       gap: var(--items-gap-sz);
 
       & li {
-        flex: 1; /* Same width in all flex elements */
         padding: 0.5rem;
         background-color: white;
         box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
