@@ -36,8 +36,7 @@
   & .c-main-menu__items-group {
     & ul {
       display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 1fr; /* Same width in all elements */
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: var(--items-gap-sz);
 
       & li {
