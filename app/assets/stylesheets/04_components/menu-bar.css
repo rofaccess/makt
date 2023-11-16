@@ -18,7 +18,7 @@
   justify-content: space-between;
   align-items: center; /* Vertical align to center */
   padding: 0.2rem 0.9rem;
-  gap: var(--c-menu-bar-items-gap);
+  gap: var(--c-menu-bar-items-gap-sz);
 
   & li {
     list-style: none;
@@ -30,7 +30,7 @@
     & ul {
       display: flex;
       justify-content: space-between;
-      gap: var(--c-menu-bar-items-gap);
+      gap: var(--c-menu-bar-items-gap-sz);
     }
   }
 }

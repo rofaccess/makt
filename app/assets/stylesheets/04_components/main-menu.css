@@ -21,3 +21,34 @@
     }
   }
 }
+
+.c-main-menu .c-main-menu__items {
+  --items-gap-sz: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--items-gap-sz);
+  padding-top: 0.5rem;
+
+  & .c-main-menu__items-group-title {
+    color: var(--c-main-menu-items-group-title-color);
+  }
+
+  & .c-main-menu__items-group {
+    & ul {
+      display: flex;
+      justify-content: start;
+      gap: var(--items-gap-sz);
+
+      & li {
+        flex: 1; /* Same width in all flex elements */
+        padding: 0.5rem;
+        background-color: white;
+        box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+          box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
+        }
+      }
+    }
+  }
+}

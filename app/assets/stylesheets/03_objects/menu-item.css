@@ -23,8 +23,8 @@
   }
 
   .o-menu-item__icon {
-    width: var(--o-menu-item-icon-md);
-    height: var(--o-menu-item-icon-md);
+    width: var(--o-menu-item-icon-sz);
+    height: var(--o-menu-item-icon-sz);
   }
 
   .o-menu-item__text {
@@ -46,12 +46,12 @@
 
 .o-menu-item--sm > .o-menu-item__link {
   .menu-item__icon {
-    width: var(--o-menu-item-icon-sm);
-    height: var(--o-menu-item-icon-sm);
+    width: var(--o-menu-item-icon-sz);
+    height: var(--o-menu-item-icon-sz);
   }
 
   .o-menu-item__text {
-    font-size: var(--o-menu-item-text-sm);
+    font-size: var(--o-menu-item-text-sz);
   }
 }
 

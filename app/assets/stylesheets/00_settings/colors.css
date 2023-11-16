@@ -17,3 +17,7 @@
 .c-collapsible-menu {
   --c-collapsible-menu-bg-color: rgba(76, 93, 101, 7%);
 }
+
+.c-main-menu {
+  --c-main-menu-items-group-title-color: #344767;
+}

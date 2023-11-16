@@ -3,13 +3,15 @@
 }
 
 .o-menu-item {
-  --o-menu-item-icon-sm: 0.938rem;
-  --o-menu-item-icon-md: 1.5rem;
+  --o-menu-item-icon-sz: 1.5rem;
+  --o-menu-item-text-sz: 1rem;
+}
 
-  --o-menu-item-text-sm: var(--menu-item-icon-sm);
-  --o-menu-item-text-md: 1rem;
+.o-menu-item--sm {
+  --o-menu-item-icon-sz: 0.938rem;
+  --o-menu-item-text-sz: var(--o-menu-item-icon-sz);
 }
 
 .c-menu-bar {
-  --c-menu-bar-items-gap: 1.25rem;
+  --c-menu-bar-items-gap-sz: 1.25rem;
 }
