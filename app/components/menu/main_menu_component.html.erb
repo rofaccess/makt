@@ -18,15 +18,15 @@
       </li>
       <li class="<%= block_class %>__items-group">
         <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
         </ul>
       </li>
       <li class="<%= block_class %>__items-group">
         <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos") %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos") %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", box: true) %></li>
         </ul>
       </li>
       <li class="<%= block_class %>__items-group-title" >
@@ -34,7 +34,7 @@
       </li>
       <li class="<%= block_class %>__items-group">
         <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios") %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
         </ul>
       </li>
     </ul>

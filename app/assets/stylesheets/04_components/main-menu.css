@@ -38,16 +38,6 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: var(--items-gap-sz);
-
-      & li {
-        padding: 0.5rem;
-        background-color: white;
-        box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
-
-        &:hover {
-          box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
-        }
-      }
     }
   }
 }

@@ -3,7 +3,7 @@
 class Menu::MenuItemComponent < ViewComponent::Base
   include ApplicationHelper
 
-  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, href: true, size: nil, inline: false)
+  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, href: true, size: nil, inline: false, box: false)
     @icon = icon
     @text = text
     @url = url
@@ -12,6 +12,7 @@ class Menu::MenuItemComponent < ViewComponent::Base
     @href = href
     @size = size # Opts: sm or lg
     @inline = inline # Show icon and text inline
+    @box = box # Show box around menu item
   end
 
   private
@@ -30,6 +31,7 @@ class Menu::MenuItemComponent < ViewComponent::Base
     classes << " #{block_class}--active" if @active
     classes << " #{block_class}--#{@size}" if @size
     classes << " #{block_class}--inline" if @inline
+    classes << " #{block_class}--box" if @box
     classes
   end
 end

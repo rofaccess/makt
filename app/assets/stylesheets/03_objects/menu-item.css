@@ -66,3 +66,13 @@
   align-items: center;
   gap: 0.5rem;
 }
+
+.o-menu-item--box > .o-menu-item__link {
+  padding: 0.5rem;
+  background-color: white;
+  box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
+  }
+}
