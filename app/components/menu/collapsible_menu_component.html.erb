@@ -1,9 +1,10 @@
 <div class="<%= block_modifier_classes %>">
   <input type="checkbox" checked id="<%= @id %>" class="<%= block_class %>__checkbox">
 
-  <label for="<%= @id %>">
+  <label for="<%= @id %>" class="<%= block_class %>__button">
     <!-- Use href: false to render a link without href because interfere whith checkbox check when click label -->
     <%= render Menu::MenuItemComponent.new(icon: @icon, text: @text, href: false) %>
+    <%= render Menu::MenuItemComponent.new(icon: "close", text: @text, href: false) %>
   </label>
 
   <nav>

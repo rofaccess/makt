@@ -18,7 +18,7 @@ User.create(users)
 product_brands = []
 30.times do
   product_brands << {
-    name: Faker::Commerce.brand
+    name: Faker::Commerce.department
   }
 end
 

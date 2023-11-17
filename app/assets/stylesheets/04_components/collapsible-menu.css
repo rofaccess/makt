@@ -1,3 +1,4 @@
+/* Menu trigger */
 .c-collapsible-menu {
   .c-collapsible-menu__checkbox {
     display: none;
@@ -15,11 +16,38 @@
         transition: all 0.4s ease-out;
       }
     }
+
+    /* Show close button and hide menu button when checkbox is checked */
+    &:checked ~ .c-collapsible-menu__button {
+      /* Menú button */
+      & > :first-child {
+        display: none;
+      }
+      /* Close button */
+      & > :last-child {
+        display: flex;
+      }
+    }
   }
 
+  /* Close button hide by default */
+  .c-collapsible-menu__button {
+    /* Close button */
+    & > :last-child {
+      color: var(--o-menu-item-active-color);
+      display: none;
+    }
+  }
+}
+
+/* Menu*/
+.c-collapsible-menu {
   & nav {
     background-color: var(--c-collapsible-menu-bg-color);
     backdrop-filter: blur(15px);
+    box-shadow: 0 0 0.3rem 0.05rem lightgray;
+    border: 1px solid lightgray;
+    border-top: none;
 
     padding: 1rem;
     visibility: hidden;
