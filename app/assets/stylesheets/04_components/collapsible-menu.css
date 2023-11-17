@@ -25,6 +25,7 @@
     visibility: hidden;
     position: absolute;
     max-height: 0;
+    max-width: 25rem;
     overflow: hidden; /* For unfold efect */
 
     margin-top: 0.7rem;
@@ -33,6 +34,7 @@
     @media (width <= 48rem) {
       margin-top: 0;
       width: 100vw;
+      max-width: 100vw;
     }
   }
 

@@ -5,11 +5,9 @@
   <% else %>
     <a class="<%= block_class %>__link" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>">
   <% end %>
-
       <% if @icon %>
-        <%= icon_tag(@icon, "#{block_class}__icon") %>
+        <span><%= icon_tag(@icon, "#{block_class}__icon") %></span>
       <% end %>
-
       <span class="<%= block_class %>__text u-prevent-select"><%= @text %></span>
   </a>
 </div>
