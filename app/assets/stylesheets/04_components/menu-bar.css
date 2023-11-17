@@ -1,6 +1,7 @@
 .c-menu-bar {
   background-color: var(--c-menu-bar-bg-color);
   box-shadow: 0 0 0.3rem 0.05rem lightgray;
+  border-top: 1px solid lightgray;
   border-bottom: 0.3rem solid var(--c-menu-bar-bd-color);
   border-radius: 0 0 0.4rem 0.4rem;
 
@@ -17,7 +18,7 @@
   display: flex; /* Display contents inline */
   justify-content: space-between;
   align-items: center; /* Vertical align to center */
-  padding: 0.2rem 0.9rem;
+  padding: 0.5rem 0.9rem 0.2rem;
   gap: var(--c-menu-bar-items-gap-sz);
 
   & li {
