@@ -1,6 +1,9 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+  menuItemClass = "o-menu-item";
+  menuItemActiveClass = `${this.menuItemClass}--active`;
+
   activateMenuItem(event) {
     const menuItem = this.#getMenuItem(event.target)
 
@@ -8,7 +11,7 @@ export default class extends Controller {
     if(this.#turboDisabled(menuItem)) return
 
     this.#deactivateMenuItems(this.element)
-    this.#activateMenuItem(menuItem)
+    this.#activateMenuItems(menuItem)
 
     this.#updateUrl(menuItem)
   }
@@ -32,26 +35,32 @@ export default class extends Controller {
   }
 
   #getMenuItem(eventTarget) {
-    return eventTarget.closest(".menu-item")
+    return eventTarget.closest(`.${this.menuItemClass}`)
   }
 
   #getLink(menuItem) {
     return menuItem.querySelector("a")
   }
 
-  #activateMenuItem(menuItem) {
-    menuItem.classList.add("menu-item--active")
+  #getHref(menuItem) {
+    return this.#getLink(menuItem).getAttribute("href")
+  }
+
+  #activateMenuItems(menuItem) {
+    const href = this.#getHref(menuItem)
+    const sameMenuItems = document.querySelectorAll(`a[href='${href}']`);
+    Array.from(sameMenuItems).forEach((element) => element.parentNode.classList.add(`${this.menuItemActiveClass}`))
   }
 
   #deactivateMenuItems(thisElement) {
-    const activeMenuItems = thisElement.getElementsByClassName("menu-item menu-item--active")
-    Array.from(activeMenuItems).forEach((element) => element.classList.remove("menu-item--active"))
+    const activeMenuItems = thisElement.getElementsByClassName(`${this.menuItemClass} ${this.menuItemActiveClass}`)
+    Array.from(activeMenuItems).forEach((element) => element.classList.remove(`${this.menuItemActiveClass}`))
   }
 
   #updateUrl(menuItem) {
     // From: https://www.30secondsofcode.org/js/s/modify-url-without-reload/
     const origin = window.location.origin
-    const pathName = this.#getLink(menuItem).getAttribute("href")
+    const pathName = this.#getHref(menuItem)
     const nextURL = origin + pathName
     const nextTitle = ""
     const nextState = { additionalInformation: "Updated the URL with JS" }

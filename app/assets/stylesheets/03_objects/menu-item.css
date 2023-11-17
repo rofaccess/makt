@@ -76,3 +76,9 @@
     box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
   }
 }
+
+.o-menu-item--box {
+  &[class~="o-menu-item--active"] > .o-menu-item__link {
+    box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
+  }
+}
