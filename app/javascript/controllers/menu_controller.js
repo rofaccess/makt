@@ -19,18 +19,27 @@ export default class extends Controller {
   /* From: https://codepen.io/fauzanmy/pen/dyprKRd
    * Note: Don't work in Firefox
   */
-  runMouseWheelHorizontalScrolling(event) {
-    let shortcuts = event.target.closest(".menu-bar__shortcuts")
+  runShortcutsMouseWheelHorizontalScrolling(event) {
+    let shortcuts = event.target.closest(".c-menu-bar__shortcuts")
+    this.#runMouseWheelHorizontalScrolling(event, shortcuts)
+  }
+
+  runMenuItemTextMouseWheelHorizontalScrolling(event) {
+    this.#runMouseWheelHorizontalScrolling(event, event.target)
+  }
+
+  #runMouseWheelHorizontalScrolling(event, scrollableContainer) {
     const race = 15 // How many pixels to scroll
 
-    if (event.deltaY > 0) shortcuts.scrollLeft += race // Scroll right
-    else shortcuts.scrollLeft -= race // Scroll left
+    if (event.deltaY > 0) scrollableContainer.scrollLeft += race // Scroll right
+    else scrollableContainer.scrollLeft -= race // Scroll left
 
     event.preventDefault()
   }
 
+
   #turboDisabled(menuItem) {
-    const turboStatus = this.#getLink(menuItem).getAttribute("data-turbo")
+    const turboStatus = menuItem.getAttribute("data-turbo")
     return turboStatus === "false" ? true : false
   }
 
@@ -38,18 +47,10 @@ export default class extends Controller {
     return eventTarget.closest(`.${this.menuItemClass}`)
   }
 
-  #getLink(menuItem) {
-    return menuItem.querySelector("a")
-  }
-
-  #getHref(menuItem) {
-    return this.#getLink(menuItem).getAttribute("href")
-  }
-
   #activateMenuItems(menuItem) {
-    const href = this.#getHref(menuItem)
+    const href = menuItem.getAttribute("href")
     const sameMenuItems = document.querySelectorAll(`a[href='${href}']`);
-    Array.from(sameMenuItems).forEach((element) => element.parentNode.classList.add(`${this.menuItemActiveClass}`))
+    Array.from(sameMenuItems).forEach((element) => element.classList.add(`${this.menuItemActiveClass}`))
   }
 
   #deactivateMenuItems(thisElement) {
@@ -60,7 +61,7 @@ export default class extends Controller {
   #updateUrl(menuItem) {
     // From: https://www.30secondsofcode.org/js/s/modify-url-without-reload/
     const origin = window.location.origin
-    const pathName = this.#getHref(menuItem)
+    const pathName = menuItem.getAttribute("href")
     const nextURL = origin + pathName
     const nextTitle = ""
     const nextState = { additionalInformation: "Updated the URL with JS" }

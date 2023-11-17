@@ -5,8 +5,8 @@
 
 .o-menu-item {
   --o-menu-item-color: #616161;
-  --o-menu-item-hover-color: var(--primary-color);
   --o-menu-item-active-color: var(--primary-color);
+  --o-menu-item-box-bg-color: #FFFFFF;
 }
 
 .c-menu-bar {

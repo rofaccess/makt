@@ -4,7 +4,7 @@
       <%= home if home? %>
     </li>
 
-    <li class="<%= block_class %>__shortcuts" data-action="mousewheel->menu#runMouseWheelHorizontalScrolling">
+    <li class="<%= block_class %>__shortcuts" data-action="mousewheel->menu#runShortcutsMouseWheelHorizontalScrolling">
       <ul>
         <% if shortcuts.any? %>
           <% shortcuts.each do |shortcut| %>

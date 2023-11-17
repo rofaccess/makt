@@ -1,13 +1,11 @@
-<div class="<%= block_modifier_classes %>">
-  <% if @href %>
-    <!-- Set data-turbo-stream attr in link because turbo is not enable for get requests by default -->
-    <a class="<%= block_class %>__link" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>" data-turbo-stream="" href="<%= @url %>">
-  <% else %>
-    <a class="<%= block_class %>__link" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>">
-  <% end %>
-      <% if @icon %>
-        <span><%= icon_tag(@icon, "#{block_class}__icon") %></span>
-      <% end %>
-      <span class="<%= block_class %>__text u-prevent-select"><%= @text %></span>
-  </a>
-</div>
+<% if @href %>
+  <!-- Set data-turbo-stream attr in link because turbo is not enable for get requests by default -->
+  <a class="<%= block_modifier_classes %>" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>" data-turbo-stream="" href="<%= @url %>">
+<% else %>
+  <a class="<%= block_modifier_classes %>" data-action="click->menu#activateMenuItem" data-turbo="<%= @turbo %>">
+<% end %>
+    <% if @icon %>
+      <span><%= icon_tag(@icon, "#{block_class}__icon") %></span>
+    <% end %>
+    <span class="<%= block_class %>__text u-prevent-select" data-action="mousewheel->menu#runMenuItemTextMouseWheelHorizontalScrolling"><%= @text %></span>
+</a>

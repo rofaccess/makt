@@ -1,29 +1,18 @@
+/* Default */
 .o-menu-item {
-  /*padding: 0.03rem; /* Avoid show scrollbar when scaling menu-item */
-}
-
-.o-menu-item > .o-menu-item__link {
   /* Show icon up and text down */
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* align-items: center; /* This avoid show text overflow like expected */
+  justify-content: start;
+  align-items: unset;
+  height: 100%;
 
   /* Remove link defaults */
   color: var(--o-menu-item-color);
   text-decoration: none;
 
-  &:hover {
-    color: var(--o-menu-item-hover-color);
-    /*transform: scale(1.02); /* Scale size animation */
-
-    /* Set svg icon to bold */
-    stroke-width: 1%;
-    stroke: var(--o-menu-item-active-color);
-  }
-
   & span {
-    text-align: center; /* Alternative center instead flex align-items: center to work text overflow like expected */
+    text-align: center;
   }
 
   .o-menu-item__icon {
@@ -36,18 +25,16 @@
     white-space: nowrap;
     overflow: auto;
   }
+
+  /* Hover, Active */
+  &:hover,
+  &[class~="o-menu-item--active"] {
+    color: var(--o-menu-item-active-color);
+  }
 }
 
-.o-menu-item--active > .o-menu-item__link {
-  color: var(--o-menu-item-active-color);
-  font-weight: bold;
-
-  /* Set svg icon to bold */
-  stroke-width: 1%;
-  stroke: var(--o-menu-item-active-color);
-}
-
-.o-menu-item--sm > .o-menu-item__link {
+/* Small */
+.o-menu-item--sm > {
   .menu-item__icon {
     width: var(--o-menu-item-icon-sz);
     height: var(--o-menu-item-icon-sz);
@@ -58,27 +45,29 @@
   }
 }
 
-.o-menu-item--inline > .o-menu-item__link {
+/* Inline */
+.o-menu-item--inline {
   /* Show icon left and text right */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-}
 
-.o-menu-item--box > .o-menu-item__link {
-  padding: 0.5rem;
-  background-color: white;
-  box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
+  & span {
+    display: contents; /* Center icon horizontally */
   }
 }
 
+/* Box */
 .o-menu-item--box {
-  &[class~="o-menu-item--active"] > .o-menu-item__link {
-    box-shadow: var(--primary-color) 0px 0px 3px 0.5px;
+  padding: 0.5rem;
+  background-color: var(--o-menu-item-box-bg-color);
+  box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
+
+  /* Hover, Active */
+  &:hover,
+  &[class~="o-menu-item--active"] {
+    box-shadow: var(--o-menu-item-active-color) 0px 0px 3px 0.5px;
   }
 }
