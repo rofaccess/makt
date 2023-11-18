@@ -6,6 +6,7 @@
       </li>
       <li class="<%= block_class %>__settings">
         <ul>
+          <li><%= render "layouts/components/theme_switcher" %></li>
           <li><%= render Menu::MenuItemComponent.new(icon: "person", text: "Mi Perfil", inline: true, size: :sm) %></li>
           <li><%= render Menu::MenuItemComponent.new(icon: "box-arrow-left", text: "Cerrar Sesión", inline: true, size: :sm) %></li>
         </ul>
