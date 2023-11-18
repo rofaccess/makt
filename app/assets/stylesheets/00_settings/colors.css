@@ -21,3 +21,12 @@
 .c-main-menu {
   --c-main-menu-items-group-title-color: #344767;
 }
+
+.c-theme-switcher {
+  --c-theme-switcher-light-mode-btn-color: goldenrod;
+  --c-theme-switcher-dark-mode-btn-color: #8c9eaa;
+  --c-theme-switcher-uncheck-slide-color: var(--c-theme-switcher-dark-mode-btn-color);
+  --c-theme-switcher-check-slide-color: var(--primary-color);
+  --c-theme-switcher-uncheck-switch-color: white;
+  --c-theme-switcher-check-switch-color: var(--c-theme-switcher-uncheck-switch-color);
+}
