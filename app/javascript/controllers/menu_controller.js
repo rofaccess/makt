@@ -1,8 +1,8 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  menuItemClass = "o-menu-item";
-  menuItemActiveClass = `${this.menuItemClass}--active`;
+  menuItemClass = "o-menu-item"
+  menuItemActiveClass = `${this.menuItemClass}--active`
 
   activateMenuItem(event) {
     const menuItem = this.#getMenuItem(event.target)
@@ -36,7 +36,6 @@ export default class extends Controller {
 
     event.preventDefault()
   }
-
 
   #turboDisabled(menuItem) {
     const turboStatus = menuItem.getAttribute("data-turbo")

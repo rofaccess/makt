@@ -1,3 +1,7 @@
+body {
+  background-color: var(--bg-color);
+}
+
 #main-container {
   /* Mobile */
   @media (width <= 48rem) {

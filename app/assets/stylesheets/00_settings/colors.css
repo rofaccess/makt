@@ -1,16 +1,19 @@
 :root {
+  --bg-color: #FFFFFF;
+  --fg-color:#616161;
+
   --primary-color: #1f8ec2;
   --secondary-color: #186E96;
 }
 
 .o-menu-item {
-  --o-menu-item-color: #616161;
+  --o-menu-item-color: var(--fg-color);
   --o-menu-item-active-color: var(--primary-color);
-  --o-menu-item-box-bg-color: #FFFFFF;
+  --o-menu-item-box-bg-color: var(--bg-color);
 }
 
 .c-menu-bar {
-  --c-menu-bar-bg-color: #FFFFFF;
+  --c-menu-bar-bg-color: var(--bg-color);
   --c-menu-bar-bd-color: var(--primary-color);
 }
 
@@ -29,4 +32,26 @@
   --c-theme-switcher-check-slide-color: var(--primary-color);
   --c-theme-switcher-uncheck-switch-color: white;
   --c-theme-switcher-check-switch-color: var(--c-theme-switcher-uncheck-switch-color);
+}
+
+:root[data-theme="dark"] {
+  --bg-color: #38444c;
+  --fg-color: #f1f2f4;
+}
+
+.o-menu-item[data-theme="dark"] {
+  --o-menu-item-color: var(--fg-color);
+  --o-menu-item-box-bg-color: var(--bg-color);
+}
+
+.c-menu-bar[data-theme="dark"] {
+  --c-menu-bar-bg-color: var(--bg-color);
+}
+
+.c-collapsible-menu[data-theme="dark"] {
+  --c-collapsible-menu-bg-color: rgba(147, 147, 147, 80%);
+}
+
+.c-main-menu[data-theme="dark"] {
+  --c-main-menu-items-group-title-color: var(--fg-color);
 }

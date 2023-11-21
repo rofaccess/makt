@@ -1,5 +1,5 @@
-<div class="c-theme-switcher">
-  <input type="checkbox" id="theme-switch" class="c-theme-switcher__checkbox"/>
+<div class="c-theme-switcher" data-controller="theme">
+  <input type="checkbox" id="theme-switch" class="c-theme-switcher__checkbox" data-action="click->theme#toggle"/>
   <label for="theme-switch" class="c-theme-switcher__switch">
     <span>
       <%= icon_tag("sun-fill") %>
