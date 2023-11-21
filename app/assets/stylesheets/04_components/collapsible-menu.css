@@ -45,8 +45,8 @@
   & nav {
     background-color: var(--c-collapsible-menu-bg-color);
     backdrop-filter: blur(15px);
-    box-shadow: 0 0 0.3rem 0.05rem lightgray;
-    border: 1px solid lightgray;
+    box-shadow: 0 0 0.3rem 0.05rem var(--c-collapsible-menu-shadow-color);
+    border: 1px solid var(--c-collapsible-menu-shadow-color);
     border-top: none;
 
     padding: 1rem;

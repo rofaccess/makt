@@ -64,10 +64,11 @@
   padding: 0.5rem;
   background-color: var(--o-menu-item-box-bg-color);
   box-shadow: 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 
   /* Hover, Active */
   &:hover,
   &[class~="o-menu-item--active"] {
-    box-shadow: var(--o-menu-item-active-color) 0px 0px 3px 0.5px;
+    box-shadow: var(--o-menu-item-active-box-shadow), 1px 1px 3px 0.5px rgba(0, 0, 0, 0.2);
   }
 }

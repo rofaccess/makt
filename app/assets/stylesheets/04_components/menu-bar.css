@@ -1,7 +1,7 @@
 .c-menu-bar {
   background-color: var(--c-menu-bar-bg-color);
-  box-shadow: 0 0 0.3rem 0.05rem lightgray;
-  border-top: 1px solid lightgray;
+  box-shadow: 0 0 0.3rem 0.05rem var(--c-menu-bar-shadow-color);
+  border-top: 1px solid var(--c-menu-bar-shadow-color);
   border-bottom: 0.3rem solid var(--c-menu-bar-bd-color);
   border-radius: 0 0 0.4rem 0.4rem;
 
