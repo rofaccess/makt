@@ -1,0 +1,27 @@
+.c-breadcrumb {
+  display: flex;
+}
+
+.c-breadcrumb > .c-breadcrumb__item {
+  display: flex;
+  align-items: center;
+
+  list-style: none;
+
+  & + li:before {
+    padding: 0.3rem;
+    content: "/";
+  }
+
+  .c-breadcrumb__item-icon {
+    & svg {
+      display: block;
+      width: var(--c-breadcrumb-item-icon-sz);
+      height: var(--c-breadcrumb-item-icon-sz);
+    }
+  }
+
+  .c-breadcrumb__item-text {
+    font-size: var(--c-breadcrumb-item-text-sz);
+  }
+}

@@ -1,0 +1,7 @@
+<ul class="<%= block_modifier_classes %>">
+  <% if items.any? %>
+    <% items.each do |item| %>
+      <%= item %>
+    <% end %>
+  <% end %>
+</ul>

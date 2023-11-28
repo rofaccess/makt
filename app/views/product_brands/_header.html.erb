@@ -1,0 +1,21 @@
+<div class="c-main-content__header">
+  <div class="c-main-content__breadcrumbs">
+    <%= render Breadcrumb::BreadcrumbComponent.new do |menu_bar| %>
+          <% menu_bar.with_items([
+            { icon: "justify" },
+            { text: t("layouts.components.sidebar.stock") },
+            { text: t("activerecord.models.product_brand.other"), active: true }
+          ]) %>
+        <% end %>
+  </div>
+
+  <div class="c-main-content__subheader">
+    <!--
+    <h1><%= t("activerecord.models.product_brand.other") %></h1>
+    <button class="e-btn e-btn--primary">Nueva Marca</button>
+    -->
+  </div>
+
+  <div class="c-main-content__searcher">
+  </div>
+</div>

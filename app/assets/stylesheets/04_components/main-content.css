@@ -1,0 +1,8 @@
+.c-main-content {
+  padding: 0.1rem 0.9rem;
+
+  .c-main-content__header {
+    display: flex;
+    flex-direction: column;
+  }
+}

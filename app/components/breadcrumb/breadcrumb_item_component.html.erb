@@ -1,0 +1,9 @@
+<li class="<%= block_modifier_classes %>">
+  <% if @icon %>
+    <span class="<%= block_class %>-icon"><%= icon_tag(@icon) if @icon %></span>
+  <% end %>
+
+  <% if @text %>
+    <span class="<%= block_class %>-text"><%= @text %></span>
+  <% end %>
+</li>

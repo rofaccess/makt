@@ -15,3 +15,8 @@
 .c-menu-bar {
   --c-menu-bar-items-gap-sz: 1.25rem;
 }
+
+.c-breadcrumb {
+  --c-breadcrumb-item-icon-sz: 1rem;
+  --c-breadcrumb-item-text-sz: 0.9rem;
+}
