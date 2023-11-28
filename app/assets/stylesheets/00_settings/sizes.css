@@ -20,3 +20,11 @@
   --c-breadcrumb-item-icon-sz: 1rem;
   --c-breadcrumb-item-text-sz: 0.9rem;
 }
+
+.c-main-content {
+  --c-main-content-title-sz: 1.3rem;
+}
+
+.e-btn {
+  --e-btn-text-sz: 0.9rem;
+}

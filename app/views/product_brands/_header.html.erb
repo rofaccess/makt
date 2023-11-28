@@ -1,5 +1,5 @@
-<div class="c-main-content__header">
-  <div class="c-main-content__breadcrumbs">
+<div class="c-main-content__header c-main-content__header--primary">
+  <div>
     <%= render Breadcrumb::BreadcrumbComponent.new do |menu_bar| %>
           <% menu_bar.with_items([
             { icon: "justify" },
@@ -10,12 +10,13 @@
   </div>
 
   <div class="c-main-content__subheader">
-    <!--
-    <h1><%= t("activerecord.models.product_brand.other") %></h1>
-    <button class="e-btn e-btn--primary">Nueva Marca</button>
-    -->
+    <h1 class="c-main-content__title"><%= t("activerecord.models.product_brand.other") %></h1>
+    <button class="e-btn e-btn--primary"><%= t("layouts.components.buttons.new_f", model: t("activerecord.models.product_brand.one"))%></button>
   </div>
+</div>
 
+<div class="c-main-content__header c-main-content__header--secondary">
   <div class="c-main-content__searcher">
+
   </div>
 </div>

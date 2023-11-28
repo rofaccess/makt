@@ -25,6 +25,14 @@
   --c-theme-switcher-check-slide-color: var(--primary-color);
   --c-theme-switcher-uncheck-switch-color: white;
   --c-theme-switcher-check-switch-color: var(--c-theme-switcher-uncheck-switch-color);
+
+  --c-main-content-header-shadow-color: lightgray;
+  --c-main-content-header-box-shadow: 0 0 0.3rem 0.05rem var(--c-main-content-header-shadow-color);
+  --c-main-content-body-bd-color: lightgray;
+
+  --e-btn-primary-bg-color: var(--primary-color);
+  --e-btn-primary-bd-color: var(--primary-color);
+  --e-btn-primary-color: white;
 }
 
 :root[data-theme="dark"] {
@@ -43,4 +51,8 @@
   --c-menu-bar-shadow-color: #232c31;
 
   --c-main-menu-items-group-title-color: var(--fg-color);
+
+  --c-main-content-header-shadow-color: #232c31;
+  --c-main-content-header-box-shadow: 0 0 0.2rem 0.03rem var(--c-main-content-header-shadow-color);
+  --c-main-content-body-bd-color: #232c31;
 }
