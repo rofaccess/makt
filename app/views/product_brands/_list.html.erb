@@ -1,29 +1,27 @@
-
 <div class="c-main-content__body">
-  <div class="card-body card-body-table">
-    <div id="product_brands">
-      <div class="table-responsive">
-        <table class="table table-hover mb-0">
-          <thead>
-            <tr>
-              <th><%= t("activerecord.attributes.product_brand.name") %></th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <% product_brands.each do |product_brand| %>
-              <tr>
-                <td class="text-bold-500"><%= product_brand.name %></td>
-                <td class="text-end">
-                  <%= link_to edit_product_brand_path(product_brand), class: "btn btn-sm btn-primary", data: { turbo: false } do %>
-                    <i class="bi bi-pencil"></i>
-                  <% end %>
-                </td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
-      </div>
-    </div>
+  <div class="u-table-container">
+    <table class="e-table">
+      <thead>
+        <tr>
+          <th class="u-left"><%= t("activerecord.attributes.product_brand.name") %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% product_brands.each do |product_brand| %>
+          <tr>
+            <td><%= product_brand.name %></td>
+            <td class="u-right">
+              <%#= link_to edit_product_brand_path(product_brand), class: "link link-primary", data: { turbo: false } do %>
+                <%= icon_tag("pencil-square") %>
+              <%# end %>
+              <%#= link_to edit_product_brand_path(product_brand), class: "link link-primary", data: { turbo: false } do %>
+                <%= icon_tag("trash") %>
+              <%# end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
   </div>
 </div>

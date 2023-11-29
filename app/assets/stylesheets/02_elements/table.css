@@ -1,0 +1,13 @@
+.e-table {
+  --table-border-color: #aeb1b7;
+  --table-padding-sz: 0.3rem;
+
+  & th, td {
+    border-bottom: 1px solid var(--table-border-color);
+    padding: var(--table-padding-sz);
+  }
+
+  & th {
+    border-bottom-width: 2px;
+  }
+}
