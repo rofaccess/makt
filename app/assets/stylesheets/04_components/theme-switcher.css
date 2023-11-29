@@ -9,15 +9,17 @@
     transform: translate3d(0, 0, 0);
 
     /* show dark icon on hover */
-    &:hover > span {
-      /* light mode button */
-      & > :first-child {
-        display: none;
-      }
+    @media(hover: hover) and (pointer: fine) { /* Hover only for desktop */
+      &:hover > span {
+        /* light mode button */
+        & > :first-child {
+          display: none;
+        }
 
-      /* dark mode button */
-      & > :last-child {
-        display: block;
+        /* dark mode button */
+        & > :last-child {
+          display: block;
+        }
       }
     }
 
@@ -111,15 +113,17 @@
     }
 
     /* show light icon on hover */
-    &:checked + .c-theme-switcher__switch:hover span {
-      /* light mode button */
-      & > :first-child {
-        display: block;
-      }
+    @media(hover: hover) and (pointer: fine) { /* Hover only for desktop */
+      &:checked + .c-theme-switcher__switch:hover span {
+        /* light mode button */
+        & > :first-child {
+          display: block;
+        }
 
-      /* dark mode button */
-      & > :last-child {
-        display: none;
+        /* dark mode button */
+        & > :last-child {
+          display: none;
+        }
       }
     }
   }
