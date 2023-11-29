@@ -1,5 +1,6 @@
 :root {
-  --primary-color: #1f8ec2;
+  --primary-color-rgb: 31, 142, 194;
+  --primary-color: rgb(var(--primary-color-rgb));
   --secondary-color: #186E96;
 
   --bg-color: #FFFFFF;
@@ -33,10 +34,15 @@
   --e-btn-primary-bg-color: var(--primary-color);
   --e-btn-primary-bd-color: var(--primary-color);
   --e-btn-primary-color: white;
+  /* btn outline */
+  --e-btn-outline-primary-bg-color: white;
+  --e-btn-outline-primary-bd-color: var(--e-btn-primary-bd-color);
+  --e-btn-outline-primary-color: var(--e-btn-primary-bd-color);
 }
 
 :root[data-theme="dark"] {
-  --primary-color: #05b0ff;
+  --primary-color-rgb: 5, 176, 255;
+  --primary-color: rgb(var(--primary-color-rgb));
   --bg-color: #56595a;
   --fg-color: #f1f2f4;
 
@@ -55,4 +61,6 @@
   --c-main-content-header-shadow-color: #232c31;
   --c-main-content-header-box-shadow: 0 0 0.2rem 0.03rem var(--c-main-content-header-shadow-color);
   --c-main-content-body-bd-color: #232c31;
+
+  --e-btn-outline-primary-bg-color: transparent;
 }

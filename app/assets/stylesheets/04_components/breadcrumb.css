@@ -14,8 +14,8 @@
   }
 
   .c-breadcrumb__item-icon {
+    padding-top: 0.2rem;
     & svg {
-      display: block;
       width: var(--c-breadcrumb-item-icon-sz);
       height: var(--c-breadcrumb-item-icon-sz);
     }

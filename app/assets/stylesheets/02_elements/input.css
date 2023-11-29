@@ -1,0 +1,11 @@
+.e-input {
+  height: 1.724rem;
+  border: 1px solid lightgray;
+  border-radius: 0.3rem;
+
+  &:focus, &:focus-visible {
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 0 0.12rem rgba(var(--primary-color-rgb),.25);
+    outline: none;
+  }
+}
