@@ -5,9 +5,21 @@
     display: block;
     width: 2.5rem;
     height: 1.25rem;
-    cursor: pointer;
     -webkit-tap-highlight-color: transparent;
     transform: translate3d(0, 0, 0);
+
+    /* show dark icon on hover */
+    &:hover > span {
+      /* light mode button */
+      & > :first-child {
+        display: none;
+      }
+
+      /* dark mode button */
+      & > :last-child {
+        display: block;
+      }
+    }
 
     &:before {
       content: "";
@@ -96,6 +108,19 @@
       transform: scale(1);
       opacity: 0;
       transition: all 0.4s ease;
+    }
+
+    /* show light icon on hover */
+    &:checked + .c-theme-switcher__switch:hover span {
+      /* light mode button */
+      & > :first-child {
+        display: block;
+      }
+
+      /* dark mode button */
+      & > :last-child {
+        display: none;
+      }
     }
   }
 }
