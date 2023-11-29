@@ -1,13 +1,17 @@
 .e-table {
-  --table-border-color: #aeb1b7;
-  --table-padding-sz: 0.3rem;
+  border-collapse: collapse; /* Remove blank spaces in borders */
 
   & th, td {
-    border-bottom: 1px solid var(--table-border-color);
-    padding: var(--table-padding-sz);
+    border-bottom: 1px solid #dcdee4;
+    padding: 0.3rem;
   }
 
   & th {
+    border-color: #aeb1b7;
     border-bottom-width: 2px;
+  }
+
+  & tr:hover {
+    background-color: rgba(var(--primary-color-rgb), 0.05);
   }
 }
