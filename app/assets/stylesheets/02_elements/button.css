@@ -10,7 +10,7 @@
   &[class~="e-btn--primary"] {
     color: var(--e-btn-primary-color);
     background-color: var(--e-btn-primary-bg-color);
-    border: 2px solid color-mix(in srgb, black 10%, var(--e-btn-primary-bg-color));;
+    border: 1px solid color-mix(in srgb, black 10%, var(--e-btn-primary-bg-color));;
 
     &:hover {
       background-color: color-mix(in srgb, black 10%, var(--e-btn-primary-bg-color));
