@@ -17,3 +17,41 @@
     local("Roboto"),
     url("./fonts/Roboto/Roboto-Medium.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Nunito"),
+    url("./fonts/Nunito/Nunito-Regular.ttf") format("truetype");
+}
+
+/* Add more styles and weight for Nunito */
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    local("Nunito"),
+    url("./fonts/Nunito/Nunito-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Lato"),
+    url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+
+/* Add more styles and weight for Lato */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: bold;
+  src:
+    local("Lato"),
+    url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+}

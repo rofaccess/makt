@@ -1,9 +1,10 @@
 .e-table {
   border-collapse: collapse; /* Remove blank spaces in borders */
+  color: var(--e-table-color);
 
   & th, td {
-    border-bottom: 1px solid #dcdee4;
-    padding: 0.3rem;
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem;
   }
 
   & th {
@@ -12,6 +13,6 @@
   }
 
   & tr:hover {
-    background-color: rgba(var(--primary-color-rgb), 0.05);
+    background-color: rgba(var(--primary-color-rgb), 0.07);
   }
 }

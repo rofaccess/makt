@@ -2,6 +2,7 @@
   --primary-color-rgb: 31, 142, 194;
   --primary-color: rgb(var(--primary-color-rgb));
   --secondary-color: #186E96;
+  --danger-color: #FF6666;
 
   --bg-color: #FFFFFF;
   --fg-color:#616161;
@@ -11,7 +12,7 @@
   --o-menu-item-box-bg-color: var(--bg-color);
   --o-menu-item-active-box-shadow: var(--o-menu-item-active-color) 0px 0px 3px 0.5px;
 
-  --c-menu-bar-bg-color: var(--bg-color);
+  --c-menu-bar-bg-color: #feffff;
   --c-menu-bar-bd-color: var(--primary-color);
   --c-menu-bar-shadow-color: lightgray;
 
@@ -27,17 +28,27 @@
   --c-theme-switcher-uncheck-switch-color: white;
   --c-theme-switcher-check-switch-color: var(--c-theme-switcher-uncheck-switch-color);
 
-  --c-main-content-header-shadow-color: lightgray;
-  --c-main-content-header-box-shadow: 0 0 0.3rem 0.05rem var(--c-main-content-header-shadow-color);
+  --c-main-content-header-primary-bg-color: #feffff;
+  --c-main-content-header-primary-shadow-color: lightgray;
+  --c-main-content-header-primary-box-shadow: 0 0 0.3rem 0.05rem var(--c-main-content-header-shadow-color);
   --c-main-content-body-bd-color: lightgray;
 
+  --e-table-color: #607080;
+
+  /* btn primary */
   --e-btn-primary-bg-color: var(--primary-color);
   --e-btn-primary-bd-color: var(--primary-color);
   --e-btn-primary-color: white;
-  /* btn outline */
+
+  /* btn outline primary */
   --e-btn-outline-primary-bg-color: white;
   --e-btn-outline-primary-bd-color: var(--e-btn-primary-bd-color);
   --e-btn-outline-primary-color: var(--e-btn-primary-bd-color);
+
+  /* link */
+  --e-link-color: var(--fg-color);
+  --e-link-primary-color: var(--primary-color);
+  --e-link-danger-color: var(--danger-color);
 }
 
 :root[data-theme="dark"] {
@@ -53,14 +64,17 @@
   --c-collapsible-menu-shadow-color: #38444c;
   --c-collapsible-menu-bg-color: rgba(30, 40, 50, 80%);
 
-  --c-menu-bar-bg-color: var(--bg-color);
+  --c-menu-bar-bg-color: #38444c;
   --c-menu-bar-shadow-color: #232c31;
 
   --c-main-menu-items-group-title-color: var(--fg-color);
 
-  --c-main-content-header-shadow-color: #232c31;
-  --c-main-content-header-box-shadow: 0 0 0.2rem 0.03rem var(--c-main-content-header-shadow-color);
+  --c-main-content-header-primary-bg-color: #38444c;
+  --c-main-content-header-primary-shadow-color: #232c31;
+  --c-main-content-header-primary-box-shadow: 0 0 0.2rem 0.03rem var(--c-main-content-header-primary-shadow-color);
   --c-main-content-body-bd-color: #232c31;
+
+  --e-table-color: var(--fg-color);
 
   --e-btn-outline-primary-bg-color: transparent;
 }

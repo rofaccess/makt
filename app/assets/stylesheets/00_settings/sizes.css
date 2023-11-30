@@ -28,3 +28,7 @@
 .e-btn {
   --e-btn-text-sz: 0.9rem;
 }
+
+.e-link {
+  --e-link-text-sz: 0.9rem;
+}

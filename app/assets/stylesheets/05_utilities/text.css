@@ -4,10 +4,12 @@
   user-select: none; /* Standard syntax */
 }
 
-.u-left {
+.u-start {
   text-align: left;
+  justify-content: start;
 }
 
-.u-right {
+.u-end {
   text-align: right;
+  justify-content: end;
 }

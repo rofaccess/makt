@@ -3,7 +3,7 @@
     <table class="e-table">
       <thead>
         <tr>
-          <th class="u-left"><%= t("activerecord.attributes.product_brand.name") %></th>
+          <th class="u-start"><%= t("activerecord.attributes.product_brand.name") %></th>
           <th></th>
         </tr>
       </thead>
@@ -11,13 +11,15 @@
         <% product_brands.each do |product_brand| %>
           <tr>
             <td><%= product_brand.name %></td>
-            <td class="u-right">
-              <%#= link_to edit_product_brand_path(product_brand), class: "link link-primary", data: { turbo: false } do %>
-                <%= icon_tag("pencil-square") %>
-              <%# end %>
-              <%#= link_to edit_product_brand_path(product_brand), class: "link link-primary", data: { turbo: false } do %>
-                <%= icon_tag("trash") %>
-              <%# end %>
+            <td>
+              <div class="u-link-group u-end">
+                <%= link_to edit_product_brand_path(product_brand), class: "e-link e-link--primary", title: "Editar", data: { turbo: false } do %>
+                  <%= icon_tag("pencil-square") %>
+                <% end %>
+                <%= link_to edit_product_brand_path(product_brand), class: "e-link e-link--danger", title: "Borrar", data: { turbo: false } do %>
+                  <%= icon_tag("trash") %>
+                <% end %>
+              </div>
             </td>
           </tr>
         <% end %>

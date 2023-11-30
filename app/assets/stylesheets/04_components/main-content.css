@@ -7,8 +7,9 @@
     flex-direction: column;
 
     &[class~="c-main-content__header--primary"] {
-      box-shadow: var(--c-main-content-header-box-shadow);
-      border-bottom: 1px solid var(--c-main-content-header-shadow-color);
+      background-color: var(--c-main-content-header-primary-bg-color);
+      box-shadow: var(--c-main-content-header-primary-box-shadow);
+      border-bottom: 1px solid var(--c-main-content-header-primary-shadow-color);
       padding-bottom: 10px;
     }
 
