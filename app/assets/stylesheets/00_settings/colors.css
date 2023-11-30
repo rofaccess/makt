@@ -55,7 +55,7 @@
 :root[data-theme="dark"] {
   --primary-color-rgb: 5, 176, 255;
   --primary-color: rgb(var(--primary-color-rgb));
-  --bg-primary-color: #56595a;
+  --bg-primary-color: #3c5465;
   --bg-secondary-color: #38444c;
   --fg-color: #f1f2f4;
 
