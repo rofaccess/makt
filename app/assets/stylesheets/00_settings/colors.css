@@ -4,15 +4,16 @@
   --secondary-color: #186E96;
   --danger-color: #FF6666;
 
-  --bg-color: #FFFFFF;
+  --bg-primary-color: #FFFFFF;
+  --bg-secondary-color: #feffff;
   --fg-color:#616161;
 
   --o-menu-item-color: var(--fg-color);
   --o-menu-item-active-color: var(--primary-color);
-  --o-menu-item-box-bg-color: var(--bg-color);
+  --o-menu-item-box-bg-color: var(--bg-primary-color);
   --o-menu-item-active-box-shadow: var(--o-menu-item-active-color) 0px 0px 3px 0.5px;
 
-  --c-menu-bar-bg-color: #feffff;
+  --c-menu-bar-bg-color: var(--bg-secondary-color);
   --c-menu-bar-bd-color: var(--primary-color);
   --c-menu-bar-shadow-color: lightgray;
 
@@ -28,7 +29,7 @@
   --c-theme-switcher-uncheck-switch-color: white;
   --c-theme-switcher-check-switch-color: var(--c-theme-switcher-uncheck-switch-color);
 
-  --c-main-content-header-primary-bg-color: #feffff;
+  --c-main-content-header-primary-bg-color: var(--bg-secondary-color);
   --c-main-content-header-primary-shadow-color: lightgray;
   --c-main-content-header-primary-box-shadow: 0 0 0.3rem 0.05rem var(--c-main-content-header-shadow-color);
   --c-main-content-body-bd-color: lightgray;
@@ -54,22 +55,23 @@
 :root[data-theme="dark"] {
   --primary-color-rgb: 5, 176, 255;
   --primary-color: rgb(var(--primary-color-rgb));
-  --bg-color: #56595a;
+  --bg-primary-color: #56595a;
+  --bg-secondary-color: #38444c;
   --fg-color: #f1f2f4;
 
   --o-menu-item-color: var(--fg-color);
-  --o-menu-item-box-bg-color: var(--bg-color);
+  --o-menu-item-box-bg-color: var(--bg-primary-color);
   --o-menu-item-active-box-shadow: var(--o-menu-item-active-color) 0px 0px 2px 2px;
 
   --c-collapsible-menu-shadow-color: #38444c;
   --c-collapsible-menu-bg-color: rgba(30, 40, 50, 80%);
 
-  --c-menu-bar-bg-color: #38444c;
+  --c-menu-bar-bg-color: var(--bg-secondary-color);
   --c-menu-bar-shadow-color: #232c31;
 
   --c-main-menu-items-group-title-color: var(--fg-color);
 
-  --c-main-content-header-primary-bg-color: #38444c;
+  --c-main-content-header-primary-bg-color: var(--bg-secondary-color);
   --c-main-content-header-primary-shadow-color: #232c31;
   --c-main-content-header-primary-box-shadow: 0 0 0.2rem 0.03rem var(--c-main-content-header-primary-shadow-color);
   --c-main-content-body-bd-color: #232c31;
