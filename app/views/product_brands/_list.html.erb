@@ -1,29 +1,27 @@
-<div class="c-main-content__body">
-  <div class="u-table-container">
-    <table class="e-table">
-      <thead>
+<div class="u-table-container u-container">
+  <table class="e-table">
+    <thead>
+      <tr>
+        <th class="u-start"><%= t("activerecord.attributes.product_brand.name") %></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% product_brands.each do |product_brand| %>
         <tr>
-          <th class="u-start"><%= t("activerecord.attributes.product_brand.name") %></th>
-          <th></th>
+          <td><%= product_brand.name %></td>
+          <td>
+            <div class="u-link-group u-end">
+              <%= link_to edit_product_brand_path(product_brand), class: "e-link e-link--primary", title: "Editar", data: { turbo: false } do %>
+                <%= icon_tag("pencil-square") %>
+              <% end %>
+              <%= link_to edit_product_brand_path(product_brand), class: "e-link e-link--danger", title: "Borrar", data: { turbo: false } do %>
+                <%= icon_tag("trash") %>
+              <% end %>
+            </div>
+          </td>
         </tr>
-      </thead>
-      <tbody>
-        <% product_brands.each do |product_brand| %>
-          <tr>
-            <td><%= product_brand.name %></td>
-            <td>
-              <div class="u-link-group u-end">
-                <%= link_to edit_product_brand_path(product_brand), class: "e-link e-link--primary", title: "Editar", data: { turbo: false } do %>
-                  <%= icon_tag("pencil-square") %>
-                <% end %>
-                <%= link_to edit_product_brand_path(product_brand), class: "e-link e-link--danger", title: "Borrar", data: { turbo: false } do %>
-                  <%= icon_tag("trash") %>
-                <% end %>
-              </div>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
+      <% end %>
+    </tbody>
+  </table>
 </div>

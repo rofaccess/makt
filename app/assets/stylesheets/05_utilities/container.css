@@ -1,3 +1,7 @@
+.u-container {
+  padding: 0.1rem 0.9rem;
+}
+
 .u-table-container {
   display: grid;
 }

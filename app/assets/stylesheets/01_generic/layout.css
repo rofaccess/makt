@@ -6,9 +6,14 @@ body {
 #main-container {
   /* Mobile */
   @media (width <= 48rem) {
-    border-top: 0.3rem solid var(--c-menu-bar-bd-color);
-    border-radius: 0.5rem 0.5rem 0 0;
     /* Don't hide main-content below menu-bar */
     margin-bottom: 5rem;
   }
+}
+
+/* From: https://elad.medium.com/css-position-sticky-how-it-really-works-54cd01dc2d46 */
+#main-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }

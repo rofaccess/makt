@@ -1,4 +1,7 @@
+<%= turbo_stream.update "main-content-header" do %>
+  <%= render "header" %>
+<% end %>
+
 <%= turbo_stream.update "main-content" do %>
-  <%= render "header", product_brands: @product_brands %>
   <%= render "list", product_brands: @product_brands %>
 <% end %>
