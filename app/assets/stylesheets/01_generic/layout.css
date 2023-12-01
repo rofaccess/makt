@@ -3,6 +3,9 @@ body {
   color: var(--fg-color);
 }
 
+/* #main-content use rest of space and show scroll
+** From: https://es.stackoverflow.com/questions/150822/div-que-ocupe-todo-el-alto-de-la-pantalla-restante
+*/
 html, body, main {
   height:100vh;
   display: flex;
