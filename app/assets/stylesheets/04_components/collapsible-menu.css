@@ -7,7 +7,7 @@
     &:checked ~ nav {
       visibility: visible;
       transition: all 0.7s ease-out;
-      max-height: calc(100vh - 4rem); /* 4rem is approximate height of menu-bar */
+      max-height: calc(100dvh - 4rem); /* 4rem is approximate height of menu-bar */
 
       /* Mobile */
       @media (width <= 48rem) {
@@ -62,8 +62,8 @@
     /* Mobile */
     @media (width <= 48rem) {
       margin-top: 0;
-      width: 100vw;
-      max-width: 100vw;
+      width: 100dvw;
+      max-width: 100dvw;
     }
   }
 
