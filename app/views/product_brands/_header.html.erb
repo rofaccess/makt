@@ -1,5 +1,5 @@
-<div class="c-main-content__header-1">
-  <div class="u-container">
+<div class="u-container c-main-content-header__header">
+  <div class="c-main-content__header-breadcrumb">
     <%= render Breadcrumb::BreadcrumbComponent.new do |breadcrumb| %>
       <% breadcrumb.with_items([
           { icon: "justify" },
@@ -8,19 +8,19 @@
         ]) %>
     <% end %>
   </div>
-  <div class="u-container">
-    <div class="c-main-content__subheader">
-      <h1 class="c-main-content__title"><%= t("activerecord.models.product_brand.other") %></h1>
-      <button class="e-btn e-btn--primary"><%= t("layouts.components.buttons.new_f", model: t("activerecord.models.product_brand.one"))%></button>
-    </div>
+  <div class="c-main-content-header__title">
+    <h1><%= t("activerecord.models.product_brand.other") %></h1>
+  </div>
+  <div class="c-main-content-header__add">
+    <button class="e-btn e-btn--primary e-btn--round e-btn--lg e-btn--bold" title="Nueva Marca">
+      <%= icon_tag("plus-lg") %>
+    </button>
   </div>
 </div>
-<div class="c-main-content__header-2">
-  <div class="u-container">
-    <form class="c-main-content__searcher">
-      <button class="e-btn e-btn--outline-primary"><%= icon_tag("grid") %></button>
-      <input class="e-input">
-      <button class="e-btn e-btn--primary"><%= icon_tag("search") %></button>
-    </form>
-  </div>
+<div class="u-container c-main-content-header__searcher">
+  <form>
+    <button class="e-btn e-btn--outline-primary"><%= icon_tag("grid") %></button>
+    <input class="e-input">
+    <button class="e-btn e-btn--primary"><%= icon_tag("search") %></button>
+  </form>
 </div>

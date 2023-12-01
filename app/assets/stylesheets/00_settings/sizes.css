@@ -21,8 +21,8 @@
   --c-breadcrumb-item-text-sz: 0.9rem;
 }
 
-.c-main-content {
-  --c-main-content-title-sz: 1.3rem;
+.c-main-content-header {
+  --c-main-content-header-title-sz: 0.7rem;
 }
 
 .e-btn {

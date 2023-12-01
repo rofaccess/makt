@@ -1,15 +1,21 @@
 .e-btn {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+
   border-radius: 0.3rem;
   font-size: var(--e-btn-text-sz);
   padding: 0.3rem;
   box-shadow: 0px 0px 0.07rem 0.01rem color-mix(in srgb, black 20%, var(--e-btn-primary-bg-color));
 
   & svg {
-    display: block;
+    width: 1rem;
+    height: 1rem;
   }
 
   &[class~="e-btn--primary"] {
     color: var(--e-btn-primary-color);
+    stroke: var(--e-btn-primary-color);
     border: 1px solid var(--e-btn-primary-bg-color);
     background-color: var(--e-btn-primary-bg-color);
 
@@ -26,6 +32,24 @@
     &:hover {
       color: var(--e-btn-primary-color);
       background-color: color-mix(in srgb, black 10%, var(--e-btn-primary-bg-color));
+    }
+  }
+
+  &[class~="e-btn--round"] {
+    border-radius: 50%;
+  }
+
+  &[class~="e-btn--lg"] {
+    & svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  &[class~="e-btn--bold"] {
+    & svg {
+      /* Set svg to bold */
+      stroke-width: 2;
     }
   }
 }
