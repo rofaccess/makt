@@ -9,7 +9,7 @@
   @media (width <= 48rem) {
       /* Show in bottom */
       bottom: 0;
-      position: fixed;
+      position: absolute; /* fixed value already work but table header show over menú in mobile */
       width: 100%;
   }
 }

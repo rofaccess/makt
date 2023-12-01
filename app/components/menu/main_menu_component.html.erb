@@ -38,6 +38,63 @@
           <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
         </ul>
       </li>
+      <li class="<%= block_class %>__items-group-title" >
+        Inventario
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", url: product_brands_path, turbo: true, box: true) %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group-title" >
+        Configuración
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group-title" >
+        Inventario
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", url: product_brands_path, turbo: true, box: true) %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group-title" >
+        Configuración
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
+        </ul>
+      </li>
+      <li class="<%= block_class %>__items-group-title" >
+        Inventario
+      </li>
+      <li class="<%= block_class %>__items-group">
+        <ul>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
+        </ul>
+      </li>
     </ul>
   </div>
 <% end %>

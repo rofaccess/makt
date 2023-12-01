@@ -1,7 +1,5 @@
 :root {
-  --primary-color-rgb: 31, 142, 194;
-  --primary-color: rgb(var(--primary-color-rgb));
-  --secondary-color: #186E96;
+  --primary-color: #1f8ec2;
   --danger-color: #FF6666;
 
   --bg-primary-color: #feffff;
@@ -41,11 +39,6 @@
   --e-btn-primary-bd-color: var(--primary-color);
   --e-btn-primary-color: white;
 
-  /* btn outline primary */
-  --e-btn-outline-primary-bg-color: white;
-  --e-btn-outline-primary-bd-color: var(--e-btn-primary-bd-color);
-  --e-btn-outline-primary-color: var(--e-btn-primary-bd-color);
-
   /* link */
   --e-link-color: var(--fg-color);
   --e-link-primary-color: var(--primary-color);
@@ -53,8 +46,8 @@
 }
 
 :root[data-theme="dark"] {
-  --primary-color-rgb: 5, 176, 255;
-  --primary-color: rgb(var(--primary-color-rgb));
+  --primary-color: #05b0ff;
+
   --bg-primary-color: #38444c;
   --bg-secondary-color: #3c5465;
   --fg-color: #f1f2f4;
@@ -77,6 +70,4 @@
   --c-main-content-body-bd-color: #232c31;
 
   --e-table-color: var(--fg-color);
-
-  --e-btn-outline-primary-bg-color: transparent;
 }

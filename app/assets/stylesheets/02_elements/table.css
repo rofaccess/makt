@@ -13,6 +13,19 @@
   }
 
   & tbody > tr:hover {
-    background-color: rgba(var(--primary-color-rgb), 0.07);
+    background-color: color-mix(in srgb, var(--primary-color), transparent 90%);
+  }
+
+  /* From: https://www.wextensible.com/como-se-hace/sticky-css/ */
+  &[class~="e-table--sticky-head"] {
+    /* Remove blank spaces in borders. Alternative is  border-collapse: collapse but the border lost when use sticky*/
+    border-collapse: separate;
+    border-spacing: 0px;
+
+    & th {
+      position: sticky;
+      top: 0;
+      background-color: var(--bg-secondary-color);
+    }
   }
 }

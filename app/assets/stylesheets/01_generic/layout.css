@@ -3,17 +3,20 @@ body {
   color: var(--fg-color);
 }
 
-#main-container {
+html, body, main {
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#main-content{
+  flex: 1;
+  overflow: auto;
+
   /* Mobile */
   @media (width <= 48rem) {
     /* Don't hide main-content below menu-bar */
-    margin-bottom: 5rem;
+    padding-bottom: 4rem;
   }
-}
-
-/* From: https://elad.medium.com/css-position-sticky-how-it-really-works-54cd01dc2d46 */
-#main-header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
 }
