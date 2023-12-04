@@ -6,14 +6,16 @@
     /* Show nav when click in checkbox label */
     &:checked ~ nav {
       visibility: visible;
-      transition: all 0.7s ease-out;
+      transition: max-height 0.7s ease-out;
+      animation: hide-scroll 0.7s backwards;
       max-height: calc(100dvh - 4rem); /* 4rem is approximate height of menu-bar */
 
       /* Mobile */
       @media (width <= 48rem) {
         /* Align to top of parent element [https://codepen.io/ngaller/pen/GpzZXN] */
         bottom: 100%;
-        transition: all 0.4s ease-out;
+        transition: max-height 0.4s ease-out;
+        animation: hide-scroll 0.4s backwards;
       }
     }
 
@@ -38,6 +40,10 @@
       display: none;
     }
   }
+}
+
+@keyframes hide-scroll {
+  from, to { overflow: hidden; }
 }
 
 /* Menu*/
