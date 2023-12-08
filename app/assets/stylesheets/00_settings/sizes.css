@@ -1,5 +1,6 @@
 :root {
   --mobile-sz: 48rem; /* This can't read in media queries */
+  --c-menu-bar-approximate-height-sz: 4rem;
 }
 
 .o-menu-item {

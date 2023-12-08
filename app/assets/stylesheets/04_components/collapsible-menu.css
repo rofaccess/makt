@@ -1,53 +1,5 @@
-/* Menu trigger */
 .c-collapsible-menu {
-  .c-collapsible-menu__checkbox {
-    display: none;
-
-    /* Show nav when click in checkbox label */
-    &:checked ~ nav {
-      visibility: visible;
-      transition: max-height 0.7s ease-out;
-      animation: hide-scroll 0.7s backwards;
-      max-height: calc(100dvh - 4rem); /* 4rem is approximate height of menu-bar */
-
-      /* Mobile */
-      @media (width <= 48rem) {
-        /* Align to top of parent element [https://codepen.io/ngaller/pen/GpzZXN] */
-        bottom: 100%;
-        transition: max-height 0.4s ease-out;
-        animation: hide-scroll 0.4s backwards;
-      }
-    }
-
-    /* Show close button and hide menu button when checkbox is checked */
-    &:checked ~ .c-collapsible-menu__button {
-      /* Menú button */
-      & > :first-child {
-        display: none;
-      }
-      /* Close button */
-      & > :last-child {
-        display: flex;
-      }
-    }
-  }
-
-  /* Close button hide by default */
-  .c-collapsible-menu__button {
-    /* Close button */
-    & > :last-child {
-      color: var(--o-menu-item-active-color);
-      display: none;
-    }
-  }
-}
-
-@keyframes hide-scroll {
-  from, to { overflow: hidden; }
-}
-
-/* Menu*/
-.c-collapsible-menu {
+  /* Default deployed menu */
   & nav {
     background-color: var(--c-collapsible-menu-bg-color);
     backdrop-filter: blur(15px);
@@ -62,7 +14,7 @@
     max-width: 25rem;
     overflow: auto;
 
-    margin-top: 0.7rem;
+    margin-top: 0.5rem;
     z-index: 1; /* Show menu over sticky table header*/
 
     /* Mobile */
@@ -70,9 +22,53 @@
       margin-top: 0;
       width: 100dvw;
       max-width: 100dvw;
+      /* Align to top of parent element [https://codepen.io/ngaller/pen/GpzZXN] */
+      bottom: 100%;
     }
   }
 
+  /* Close button hide by default */
+  .c-collapsible-menu__button {
+    /* Close button */
+    & > :last-child {
+      color: var(--o-menu-item-active-color);
+      display: none;
+    }
+  }
+
+  .c-collapsible-menu__checkbox {
+    display: none;
+
+    /* Show nav when click in checkbox label */
+    &:checked ~ nav {
+      visibility: visible;
+      max-height: calc(100dvh - var(--c-menu-bar-approximate-height-sz));
+
+      transition: max-height 0.4s ease-out;
+      animation: hide-scroll 0.4s backwards;
+    }
+
+    /* Show close button and hide menu button when checkbox is checked */
+    &:checked ~ .c-collapsible-menu__button {
+      /* Menú button */
+      & > :first-child {
+        display: none;
+      }
+      /* Close button */
+      & > :last-child {
+        display: flex;
+      }
+    }
+  }
+}
+
+/* From: https://css-tricks.com/hide-scrollbars-during-an-animation/*/
+@keyframes hide-scroll {
+  from, to { overflow: hidden; }
+}
+
+/* Menu*/
+.c-collapsible-menu {
   /* Unfolded menu position */
   /* Default position */
   & nav {

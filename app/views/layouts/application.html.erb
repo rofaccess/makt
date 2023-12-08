@@ -11,29 +11,25 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <main id="main-container">
-      <header id="main-header">
-        <%= render Menu::MenuBarComponent.new do |menu_bar| %>
-          <% menu_bar.with_home(icon: "dashboard", text: "Inicio", url: root_path, turbo: true) %>
+    <%= render Menu::MenuBarComponent.new do |menu_bar| %>
+      <% menu_bar.with_home(icon: "dashboard", text: "Inicio", url: root_path, turbo: true) %>
 
-          <% menu_bar.with_shortcuts([
-            { icon: "warehouse", text: "Depósitos" },
-            { icon: "boxes", text: "Productos" },
-            { icon: "arrow-repeat", text: "Movimientos" },
-            { icon: "tags", text: "Marcas", url: product_brands_path, turbo: true },
-          ]) %>
+      <% menu_bar.with_shortcuts([
+        { icon: "warehouse", text: "Depósitos" },
+        { icon: "boxes", text: "Productos" },
+        { icon: "arrow-repeat", text: "Movimientos" },
+        { icon: "tags", text: "Marcas", url: product_brands_path, turbo: true },
+      ]) %>
 
-          <% menu_bar.with_main_menu %>
-        <% end %>
+      <% menu_bar.with_main_menu %>
+    <% end %>
 
-        <div id="main-content-header" class="c-main-content-header">
-          <%= yield :header %>
-        </div>
-      </header>
+    <header id="header" class="c-main-content-header">
+      <%= yield :header %>
+    </header>
 
-      <div id="main-content" class="c-main-content">
-        <%= yield %>
-      </div>
+    <main id="main" class="c-main-content">
+      <%= yield %>
     </main>
   </body>
 </html>
