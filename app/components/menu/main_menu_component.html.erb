@@ -7,8 +7,8 @@
       <li class="<%= block_class %>__settings">
         <ul>
           <li><%= render "layouts/components/theme_switcher" %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "person", text: "Mi Perfil", inline: true, size: :sm) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "box-arrow-left", text: "Cerrar Sesión", inline: true, size: :sm) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "person", text: "Mi Perfil", style: { inline: true, size: :sm }) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "box-arrow-left", text: "Cerrar Sesión", url: destroy_user_session_path, data: { turbo: true, turbo_method: :delete }, style: { inline: true, size: :sm }) %>
         </ul>
       </li>
     </ul>
@@ -19,39 +19,15 @@
       </li>
       <li class="<%= block_class %>__items-group">
         <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, data: { turbo: true }, style: { box: true }) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", style: { box: true }) %></li>
         </ul>
       </li>
       <li class="<%= block_class %>__items-group">
         <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos", box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", url: product_brands_path, turbo: true, box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group-title" >
-        Configuración
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group-title" >
-        Inventario
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos", box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", url: product_brands_path, turbo: true, box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", style: { box: true }) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos",  style: { box: true }) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", url: product_brands_path, data: { turbo: true }, style: { box: true }) %></li>
         </ul>
       </li>
       <li class="<%= block_class %>__items-group-title" >
@@ -59,40 +35,7 @@
       </li>
       <li class="<%= block_class %>__items-group">
         <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group-title" >
-        Inventario
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósitos", box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "boxes", text: "Productos", box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "tags", text: "Marcas", url: product_brands_path, turbo: true, box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group-title" >
-        Configuración
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", box: true) %></li>
-        </ul>
-      </li>
-      <li class="<%= block_class %>__items-group-title" >
-        Inventario
-      </li>
-      <li class="<%= block_class %>__items-group">
-        <ul>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 1 - Sucursal Principal", url: root_path, turbo: true, box: true) %></li>
-          <li><%= render Menu::MenuItemComponent.new(icon: "warehouse", text: "Depósito 2", box: true) %></li>
+          <li><%= render Menu::MenuItemComponent.new(icon: "people", text: "Usuarios", style: { box: true }) %></li>
         </ul>
       </li>
     </ul>

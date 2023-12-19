@@ -3,16 +3,16 @@
 class Menu::MenuItemComponent < ViewComponent::Base
   include ApplicationHelper
 
-  def initialize(icon: nil, text:, url: "#", turbo: false, active: false, href: true, size: nil, inline: false, box: false)
+  def initialize(icon: nil, text:, url: nil, data: {}, style: {})
     @icon = icon
     @text = text
     @url = url
-    @turbo = turbo
-    @active = active
-    @href = href
-    @size = size # Opts: sm or lg
-    @inline = inline # Show icon and text inline
-    @box = box # Show box around menu item
+    @data = { turbo: false }.merge(data)
+    @style = { active: false, size: nil, inline: false, box: false }.merge(style)
+    @active = style[:active]
+    @size = style[:size] # Opts: sm or lg
+    @inline = style[:inline] # Show icon and text inline
+    @box = style[:box] # Show box around menu item
   end
 
   private
@@ -20,6 +20,10 @@ class Menu::MenuItemComponent < ViewComponent::Base
   def before_render
     # request method is accesible only before render
     @active = (@active || request.path == @url)
+    # Set active link using javascript
+    @data[:action] = "click->menu#activateMenuItem"
+    # Set data-turbo-stream attr in link because turbo is not enable for get requests by default
+    @data["turbo-stream"] = ""
   end
 
   def block_class

@@ -66,4 +66,22 @@ RSpec.describe ApplicationHelper, type: :helper do
       expect(stock_settings_paths).to eq(["/product_brands"])
     end
   end
+
+  describe ".link" do
+    it "return empty link when no pass arguments" do
+      expect(link).to eq("<a></a>")
+    end
+
+    it "return link with class" do
+      expect(link(class: "my-class")).to eq("<a class=\"my-class\"></a>")
+    end
+
+    it "return link with href" do
+      expect(link("#")).to eq("<a href=\"#\"></a>")
+    end
+
+    it "return link with data" do
+      expect(link(data: { turbo: true, action: "Some Action" })).to eq("<a data-turbo=\"true\" data-action=\"Some Action\"></a>")
+    end
+  end
 end

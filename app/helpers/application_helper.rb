@@ -49,4 +49,10 @@ module ApplicationHelper
   def stock_settings_paths
     [product_brands_path]
   end
+
+  def link(url = nil, class: nil, data: nil)
+    content_tag :a, class: binding.local_variable_get(:class), href: url, data: data do
+      yield if block_given?
+    end
+  end
 end
