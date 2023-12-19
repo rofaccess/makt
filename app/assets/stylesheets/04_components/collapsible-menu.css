@@ -15,7 +15,7 @@
     overflow: auto;
 
     margin-top: 0.5rem;
-    z-index: 1; /* Show menu over sticky table header*/
+    z-index: 2; /* Show menu over header and sticky table header*/
 
     /* Mobile */
     @media (width <= 48rem) {

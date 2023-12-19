@@ -1,0 +1,11 @@
+.c-filter {
+  background-color: color-mix(in srgb, var(--primary-color), transparent 95%);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--c-filter-bd-color);
+
+  & form {
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+  }
+}

@@ -6,6 +6,9 @@
   --bg-secondary-color: #FFFFFF;
   --fg-color:#616161;
 
+  --header-shadow-color: lightgray;
+  --header-box-shadow: 0 0 0.3rem 0.05rem var(--header-shadow-color);
+
   --o-menu-item-color: var(--fg-color);
   --o-menu-item-active-color: var(--primary-color);
   --o-menu-item-box-bg-color: var(--bg-secondary-color);
@@ -27,19 +30,14 @@
   --c-theme-switcher-uncheck-switch-color: white;
   --c-theme-switcher-check-switch-color: var(--c-theme-switcher-uncheck-switch-color);
 
-  --c-main-content-header-1-bg-color: var(--bg-primary-color);
-  --c-main-content-header-1-shadow-color: lightgray;
-  --c-main-content-header-1-box-shadow: 0 0 0.3rem 0.05rem var(--c-main-content-header-1-shadow-color);
-  --c-main-content-body-bd-color: lightgray;
+  --c-filter-bd-color: lightgray;
 
   --e-table-color: #607080;
 
-  /* btn primary */
   --e-btn-primary-bg-color: var(--primary-color);
   --e-btn-primary-bd-color: var(--primary-color);
   --e-btn-primary-color: white;
 
-  /* link */
   --e-link-color: var(--fg-color);
   --e-link-primary-color: var(--primary-color);
   --e-link-danger-color: var(--danger-color);
@@ -51,6 +49,9 @@
   --bg-primary-color: #38444c;
   --bg-secondary-color: #3c5465;
   --fg-color: #f1f2f4;
+
+  --header-shadow-color: #232c31;
+  --header-box-shadow: 0 0 0.2rem 0.03rem var(--header-shadow-color);
 
   --o-menu-item-color: var(--fg-color);
   --o-menu-item-box-bg-color: var(--bg-secondary-color);
@@ -64,10 +65,7 @@
 
   --c-main-menu-items-group-title-color: var(--fg-color);
 
-  --c-main-content-header-1-bg-color: var(--bg-primary-color);
-  --c-main-content-header-1-shadow-color: #232c31;
-  --c-main-content-header-1-box-shadow: 0 0 0.2rem 0.03rem var(--c-main-content-header-1-shadow-color);
-  --c-main-content-body-bd-color: #232c31;
+  --c-filter-bd-color: #0000004f;
 
   --e-table-color: var(--fg-color);
 }

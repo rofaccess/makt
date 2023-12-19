@@ -3,11 +3,6 @@ body {
   color: var(--fg-color);
 }
 
-/* #main-content use rest of space and show scroll
-** From: https://es.stackoverflow.com/questions/150822/div-que-ocupe-todo-el-alto-de-la-pantalla-restante
-*/
-
-
 body {
   display: flex;
   flex-direction: column;
@@ -22,5 +17,42 @@ body {
   @media (width <= 48rem) {
     /* Don't hide main below menu-bar */
     padding-bottom: var(--c-menu-bar-approximate-height-sz);
+  }
+}
+
+#header {
+  z-index: 1; /* header over table header */
+
+  /* Mobile */
+  @media (width <= 48rem) {
+    border-top: 0.3rem solid var(--c-menu-bar-bd-color);
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}
+
+.header {
+  display: grid;
+  grid-template-areas:  "breadcrumb add"
+                        "title add";
+
+  box-shadow: var(--header-box-shadow);
+  border-bottom: 1px solid var(--header-shadow-color);
+  padding-bottom: 10px;
+  background-color: var(--bg-primary-color);
+
+  .header__breadcrumb {
+    grid-area: breadcrumb;
+  }
+
+  .header__title {
+    grid-area: title;
+    font-size: var(--header-title-sz);
+  }
+
+  .header__add {
+    grid-area: add;
+    display: flex;
+    justify-content: end;
+    align-items: center;
   }
 }
