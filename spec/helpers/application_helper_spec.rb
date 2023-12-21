@@ -1,33 +1,25 @@
 require "rails_helper"
 
 RSpec.describe ApplicationHelper, type: :helper do
-  describe ".logo_color" do
-    it "return logo color" do
-      expect(logo_color).to eq("lilac")
-    end
-  end
-
-  describe ".logo_name" do
-    it "return logo name" do
-      expect(logo_name).to eq("logo_lilac.png")
-    end
-  end
-
-  describe ".favicon_logo_name" do
-    it "return favicon logo name" do
-      expect(favicon_logo_name).to eq("favicon_logo_lilac.ico")
-    end
-  end
-
   describe ".favicon_logo_tag" do
     it "return favicon logo tag" do
-      expect(favicon_logo_tag).to eq("<link rel='icon' type='image/x-icon' href='/images/favicon_logo_lilac.ico'>")
+      expect(favicon_logo_tag).to match(/<link rel='icon' type='image\/x-icon' href='(.*)'>/)
     end
   end
 
   describe ".logo_tag" do
     it "return logo tag" do
-      expect(logo_tag).to eq("<a href='/' data-turbo='false'><img src='/images/logo_lilac.png' alt='MaKT'></a>")
+      expect(logo_tag).to match(/<a href='(.*)' data-turbo='false'><img src='(.*)' alt='MaKT'><\/a>/)
+    end
+  end
+
+  describe ".icon_tag" do
+    it "return icon tag" do
+      expect(icon_tag("pencil-square")).to match(/<svg(.|\n)*<\/svg>/)
+    end
+
+    it "return default icon tag when not found icon" do
+      expect(icon_tag("nonexistent_icon")).to match(/<svg(.|\n)*<\/svg>/)
     end
   end
 

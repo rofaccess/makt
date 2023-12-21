@@ -3,13 +3,10 @@
 require "rails_helper"
 
 RSpec.describe Menu::CollapsibleMenuComponent, type: :component do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "renders collapsible_menu" do
+    render_inline(Menu::CollapsibleMenuComponent.new(icon: "justify", text: "My Menú", id: "my-menu"))
 
-  # it "renders something useful" do
-  #   expect(
-  #     render_inline(described_class.new(attr: "value")) { "Hello, components!" }.css("p").to_html
-  #   ).to include(
-  #     "Hello, components!"
-  #   )
-  # end
+    # Use puts page.native To print html rendered
+    expect(page).to have_link "My Menú", class: "o-menu-item", href: nil
+  end
 end

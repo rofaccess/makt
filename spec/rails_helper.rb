@@ -72,6 +72,9 @@ RSpec.configure do |config|
   # To test controllers with Devise [https://github.com/heartcombo/devise/]
   config.include Devise::Test::ControllerHelpers, type: :request
   config.include Devise::Test::ControllerHelpers, type: :view
+
+  # To test ApplicationHelper methods that using inline_svg_tag method
+  config.include InlineSvg::ActionView::Helpers, type: :helper
 end
 
 # Extend Capybara have_link selector to consider data-turbo attr

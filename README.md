@@ -73,4 +73,4 @@ Ejecutar todas las pruebas
 > bundle exec rspec
 
 Ejecutar una prueba en específico
-> bundle exec rspec spec/components/sidebar/submenu_component_spec.rb:44
+> bundle exec rspec spec/components/menu/menu_item_component_spec.rb:44
