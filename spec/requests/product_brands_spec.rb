@@ -13,16 +13,16 @@ require 'rails_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/product_brands", type: :request do
-  
+  include_context :login_user
   # This should return the minimal set of attributes required to create a valid
   # ProductBrand. As you add validations to ProductBrand, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { name: "Nike" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { name: nil }
   }
 
   describe "GET /index" do
@@ -77,26 +77,23 @@ RSpec.describe "/product_brands", type: :request do
         }.to change(ProductBrand, :count).by(0)
       end
 
-    
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
         post product_brands_url, params: { product_brand: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { name: "Nike" }
       }
 
       it "updates the requested product_brand" do
         product_brand = ProductBrand.create! valid_attributes
         patch product_brand_url(product_brand), params: { product_brand: new_attributes }
         product_brand.reload
-        skip("Add assertions for updated state")
       end
 
       it "redirects to the product_brand" do
@@ -108,13 +105,11 @@ RSpec.describe "/product_brands", type: :request do
     end
 
     context "with invalid parameters" do
-    
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         product_brand = ProductBrand.create! valid_attributes
         patch product_brand_url(product_brand), params: { product_brand: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 

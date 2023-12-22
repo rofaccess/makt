@@ -70,11 +70,17 @@ RSpec.configure do |config|
   config.include Capybara::RSpecMatchers, type: :component
 
   # To test controllers with Devise [https://github.com/heartcombo/devise/]
-  config.include Devise::Test::ControllerHelpers, type: :request
+  config.include Devise::Test::IntegrationHelpers, type: :request
   config.include Devise::Test::ControllerHelpers, type: :view
 
   # To test ApplicationHelper methods that using inline_svg_tag method
   config.include InlineSvg::ActionView::Helpers, type: :helper
+end
+
+# From: https://dev.to/kevinluo201/introduce-rspec-request-spec-4pbl
+RSpec.shared_context :login_user do
+  let(:user) { User.create(email: "user@email.com", password: "terere") }
+  before { sign_in user }
 end
 
 # Extend Capybara have_link selector to consider data-turbo attr

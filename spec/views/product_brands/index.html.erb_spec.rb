@@ -4,17 +4,17 @@ RSpec.describe "product_brands/index", type: :view do
   before(:each) do
     assign(:product_brands, [
       ProductBrand.create!(
-        name: "Name"
+        name: "Product Brand 1"
       ),
       ProductBrand.create!(
-        name: "Name"
+        name: "Product Brand 2"
       )
     ])
   end
 
   it "renders a list of product_brands" do
     render
-    cell_selector = Rails::VERSION::STRING >= '7' ? 'div>p' : 'tr>td'
-    assert_select cell_selector, text: Regexp.new("Name".to_s), count: 2
+    cell_selector = "tr>td"
+    assert_select cell_selector, text: Regexp.new("Product Brand".to_s), count: 2
   end
 end
